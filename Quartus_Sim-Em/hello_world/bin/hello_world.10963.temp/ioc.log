@@ -1,0 +1,17 @@
+Using build options: -cl-std=CL1.2 -g -s "/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device/hello_world.cl" -Xclang -Wuninitialized -Xclang -DINTELFPGA_CL=211 -Xclang -ivfsoverlay-lib/home/joerock/intelFPGA_pro/21.1/hld/linux64/lib/libaoc_clang_decrypt.so -I "/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device"
+Setting target instruction set architecture to: Default (Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2))
+Platform name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+Device name: Intel(R) FPGA Emulation Device
+Device version: OpenCL 1.2 
+Device vendor: Intel(R) Corporation
+Device profile: EMBEDDED_PROFILE
+Compilation started
+/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device/hello_world.cl:24:76: error: pointer arguments to kernel functions must reside in '__global', '__constant' or '__local' address space
+__kernel void hello_world(int thread_id_from_which_to_print_message, char *message) {
+                                                                           ^
+/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device/hello_world.cl:30:13: error: assigning '__constant char *' to '__private char *__private' changes address space of pointer
+    message = "Hello from the Intel FPGA OpenCL Compiler!";
+            ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compilation failed
+Failed to build program...: -15 (CL_COMPILE_PROGRAM_FAILURE)
+Compilation failed!

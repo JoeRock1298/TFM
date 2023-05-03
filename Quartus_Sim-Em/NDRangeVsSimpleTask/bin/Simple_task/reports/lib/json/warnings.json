@@ -1,0 +1,3 @@
+{"nodes":[
+{"debug":[[{"filename":"Simple_task.cl","line":"1"}]],"details":[{"text":"Compiler Warning: Simple_task.cl:1: declaring global arguments 'A', 'B' and 'C' with no 'restrict' may lead to low performance for kernel 'mmul'"}],"name":"Simple_task.cl:1: declaring global arguments 'A', 'B' and 'C' with no 'restrict' may lead to low performance for kernel 'mmul'"}
+]}

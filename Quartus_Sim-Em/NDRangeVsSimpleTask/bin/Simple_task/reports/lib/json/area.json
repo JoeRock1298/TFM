@@ -1,0 +1,1361 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [16.8029, 8.74778, 8.57935, 7.85109, 0.263505]
+  , "total":
+  [73401, 146604, 213, 4, 67]
+  , "name":"Kernel System"
+  , "max_resources":
+  [854400, 1708800, 2713, 1518, 42720]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [65540, 131080, 176, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [4121, 5284, 0, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 2 global loads and 1 global store. Reduce number of global loads and stores to simplify global interconnect."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 2 global loads and 1 global store."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/hnj1476724450050.html"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [0, 67, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes. The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"mmul"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [1.15549, 0.594569, 0.59533, 1.29008, 0.263505]
+      , "total_kernel_resources":
+      [3740, 10173, 35, 4, 67]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"text"
+          , "text":"Kernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit.\nKernel attribute 'uses_global_work_offset' not specified. Add '__attribute__((uses_global_work_offset(0)))' to reduce area utilization if the kernel will always be enqueued with a 0 or NULL global_work_offset argument in clEnqueueNDRangeKernel. Add '__attribute__((uses_global_work_offset(1)))' to hide this suggestion without affecting kernel functionality."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1338, 2411, 0, 0, 10]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (Simple_task.cl:10)"
+          , "type":"resource"
+          , "data":
+          [14, 73, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Simple_task.cl"
+                , "line":10
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 bits and depth 1"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33 bits and depth 1"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width by 1 depth,\n1 reg, 33 width by 1 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'j' (Simple_task.cl:12)"
+          , "type":"resource"
+          , "data":
+          [14, 73, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Simple_task.cl"
+                , "line":12
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 bits and depth 1"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33 bits and depth 1"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width by 1 depth,\n1 reg, 33 width by 1 depth"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'k' (Simple_task.cl:15)"
+          , "type":"resource"
+          , "data":
+          [31, 138, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Simple_task.cl"
+                , "line":15
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 bits and depth 1"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 33 bits and depth 1"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width by 1 depth,\n1 reg, 33 width by 1 depth"
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [2, 34, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [2, 34, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [8, 2, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [8, 2, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [86, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [70, 2, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [20, 45, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [20, 45, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [17, 9, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [9, 7, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [8, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [8, 6, 0, 0, 2]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [39, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"Simple_task.cl:17"
+                  , "type":"resource"
+                  , "data":
+                  [16, 0, 0, 0.75, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":17
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0.75, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [16, 0, 0, 0.75, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0.75, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 8, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:22"
+                  , "type":"resource"
+                  , "data":
+                  [5, 8, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":22
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B3"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [52, 141, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [52, 141, 0, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [49, 60, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [16, 10, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:12"
+                  , "type":"resource"
+                  , "data":
+                  [9, 7, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:17"
+                  , "type":"resource"
+                  , "data":
+                  [4, 18, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":17
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [20, 25, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [8, 6, 0, 0, 6]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:12"
+                  , "type":"resource"
+                  , "data":
+                  [39, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B4"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [27, 19, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [27, 19, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B5"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [64, 96, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [64, 96, 1, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [27, 19, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [27, 19, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [431, 2216, 1, 0, 31]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [399, 2216, 1, 0, 31]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B6"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [143, 500, 3, 0, 4]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [143, 500, 3, 0, 4]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [115, 195, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [16, 10, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:12"
+                  , "type":"resource"
+                  , "data":
+                  [41, 111, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:15"
+                  , "type":"resource"
+                  , "data":
+                  [34, 28, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":15
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:17"
+                  , "type":"resource"
+                  , "data":
+                  [4, 18, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":17
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [20, 28, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [16, 12, 0, 0, 14]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"Simple_task.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [0.333333, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.333333, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"Simple_task.cl:15"
+                  , "type":"resource"
+                  , "data":
+                  [43.3333, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":15
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [2, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1.33333, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"2-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"Simple_task.cl:17"
+                  , "type":"resource"
+                  , "data":
+                  [1110.33, 4106, 30, 2.5, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":17
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.333333, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Floating-point Accumulator"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0, 0, 0, 1, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 1.5, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1014, 4106, 30, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"Simple_task.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [1, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit Or"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

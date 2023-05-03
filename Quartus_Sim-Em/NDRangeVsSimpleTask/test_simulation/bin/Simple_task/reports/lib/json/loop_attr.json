@@ -1,0 +1,192 @@
+{
+  "name":"loop_attributes"
+  , "id":4294967295
+  , "nodes":
+  [
+    {
+      "name":"mmul"
+      , "id":1704556640
+      , "clk":"No"
+      , "fmax":"240.00"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+            , "line":6
+          }
+        ]
+      ]
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"mmul.B0"
+          , "id":1704268080
+          , "af":"240.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"2.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"mmul.B1"
+          , "id":1704306384
+          , "af":"240.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"8.000000"
+          , "mi":"1"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: n/a"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+                , "line":10
+              }
+            ]
+          ]
+          , "type":"loop"
+          , "children":
+          [
+            {
+              "name":"mmul.B3"
+              , "id":1703787568
+              , "af":"240.00"
+              , "br":"0"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"5.000000"
+              , "mi":"1"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"0"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Hyper-Optimized loop structure: n/a"
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+                    , "line":12
+                  }
+                ]
+              ]
+              , "type":"loop"
+              , "children":
+              [
+                {
+                  "name":"mmul.B6"
+                  , "id":1703787808
+                  , "af":"240.00"
+                  , "br":"1"
+                  , "ci":"0"
+                  , "fo":"Disabled"
+                  , "ii":"1"
+                  , "ll":"3"
+                  , "lt":"177.000000"
+                  , "mi":"1"
+                  , "pl":"Yes"
+                  , "tc":"0"
+                  , "tn":"0"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Hyper-Optimized loop structure: n/a"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+                        , "line":15
+                      }
+                    ]
+                  ]
+                  , "type":"loop"
+                }
+              ]
+            }
+            , {
+              "name":"mmul.B5"
+              , "id":1703787728
+              , "af":"240.00"
+              , "br":"1"
+              , "ci":"0"
+              , "fo":"Disabled"
+              , "ii":"1"
+              , "ll":"2"
+              , "lt":"3.000000"
+              , "mi":"n/a"
+              , "pl":"Yes"
+              , "tc":"0"
+              , "tn":"1"
+              , "type":"bb"
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B4"
+          , "id":1703787648
+          , "af":"240.00"
+          , "br":"1"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"0.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"mmul.B2"
+          , "id":1703787488
+          , "af":"240.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"1.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+}

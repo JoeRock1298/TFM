@@ -1,0 +1,1 @@
+var infoJSON={"compileInfo":{"nodes":[{"command":"aoc -march=simulator -v Simple_task.cl -o bin/Simple_task.aocx -board=a10gx","family":"Arria 10, 10AX115S2F45I1SG, a10_ref:a10gx","id":1,"name":"Simple_task","product":"OPENCL","quartus":"21.1.0 Build 169 Pro","time":"Wed May  3 13:07:53 2023","version":"21.1.0 Build 173.3"}]}};

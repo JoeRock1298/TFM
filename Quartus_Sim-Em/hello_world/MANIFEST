@@ -1,0 +1,11 @@
+hello_world/README.html
+hello_world/Makefile
+hello_world/device/hello_world.cl
+hello_world/host/src/main.cpp
+common/readme.css
+common/inc/AOCLUtils/aocl_utils.h
+common/inc/AOCLUtils/opencl.h
+common/inc/AOCLUtils/options.h
+common/inc/AOCLUtils/scoped_ptrs.h
+common/src/AOCLUtils/opencl.cpp
+common/src/AOCLUtils/options.cpp

@@ -1,0 +1,295 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Global variable"
+      , "id":4294967295
+      , "src":"3982125728"
+      , "dst":"3990515568"
+      , "concurrency":"1"
+      , "type":"Occupancy limiter"
+      , "brief":"Memory dependency"
+      , "loop":"mmul.B3"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Concurrency value: ":"1"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"Loop: mmul.B6(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                  , "line":"15"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":3982125728
+          , "start":"5.00"
+          , "parent":"mmul.B3"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":19
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"mmul.B6"
+          , "id":3975794352
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":15
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"Feedback"
+          , "id":3990515568
+          , "end":"58.00"
+          , "parent":"mmul.B5"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":19
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":3975794352
+          , "to":3975794352
+        }
+        , {
+          "from":3982125728
+          , "to":3975794352
+        }
+        , {
+          "from":3975794352
+          , "to":3990515568
+        }
+        , {
+          "from":3982125728
+          , "to":3990515568
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"Global variable"
+      , "id":4294967295
+      , "src":"3991018336"
+      , "dst":"3977695072"
+      , "concurrency":"1"
+      , "type":"Occupancy limiter"
+      , "brief":"Memory dependency"
+      , "loop":"mmul.B1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Memory dependency"
+          , "Concurrency value: ":"1"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"Loop: mmul.B3(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                  , "line":"12"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: mmul.B6(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                  , "line":"15"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: mmul.B5(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                  , "line":"12"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":3991018336
+          , "start":"8.00"
+          , "parent":"mmul.B1"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":19
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"mmul.B3"
+          , "id":3982816080
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":12
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"mmul.B6"
+          , "id":3975794352
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":15
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"mmul.B5"
+          , "id":3982911856
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":12
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"Feedback"
+          , "id":3977695072
+          , "end":"1.00"
+          , "parent":"mmul.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl"
+                , "line":19
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":3975794352
+          , "to":3975794352
+        }
+        , {
+          "from":3982816080
+          , "to":3975794352
+        }
+        , {
+          "from":3975794352
+          , "to":3982911856
+        }
+        , {
+          "from":3991018336
+          , "to":3982816080
+        }
+        , {
+          "from":3982911856
+          , "to":3977695072
+        }
+        , {
+          "from":3991018336
+          , "to":3977695072
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

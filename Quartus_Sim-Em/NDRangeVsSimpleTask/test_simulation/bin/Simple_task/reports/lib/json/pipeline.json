@@ -1,0 +1,2328 @@
+{
+  "1707194464":
+  {
+    "nodes":
+    [
+      {
+        "name":"*"
+        , "id":1717815568
+        , "subtype":"default"
+        , "start":"2.00"
+        , "end":"5.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Multiply"
+            , "Start Cycle":"2"
+            , "Latency":"3"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"And"
+        , "id":1717816272
+        , "subtype":"default"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"1-bit And"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Orch"
+        , "id":1717816624
+        , "subtype":"default"
+        , "start":"5.00"
+        , "end":"5.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Orchestration Logic"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1717824336
+        , "subtype":"default"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Constant Operand":"1 (0x1)"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Entry"
+        , "id":1718012592
+        , "subtype":"entry"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Cluster Entry"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Dest"
+        , "id":1718014736
+        , "subtype":"ffwdDest"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Destination"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Select"
+        , "id":1718020752
+        , "subtype":"select"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"33-bit Select"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"N"
+        , "id":1718021104
+        , "subtype":"default"
+        , "start":"0.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input Synchronization for 'N'"
+            , "Start Cycle":"0"
+            , "Latency":"2"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Global variable"
+        , "id":1718023328
+        , "subtype":"pop"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Global variable"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Exit"
+        , "id":1718217216
+        , "subtype":"exit"
+        , "start":"5.00"
+        , "end":"8.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Start Cycle":"5"
+            , "Latency":"3"
+            , "Exit FIFO Depth":"32"
+            , "Exit FIFO Width":"96"
+            , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Dest"
+        , "id":1723285744
+        , "subtype":"ffwdDest"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Destination"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1717815568
+        , "to":1718217216
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1717816272
+        , "to":1717816624
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1717816272
+        , "to":1718023328
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1717816272
+        , "to":1718020752
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1717816272
+        , "to":1718217216
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1717816624
+        , "to":1718217216
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1717824336
+        , "to":1718023328
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1718012592
+        , "to":1718020752
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"16"
+          }
+        ]
+      }
+      , {
+        "from":1718012592
+        , "to":1718023328
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"16"
+          }
+        ]
+      }
+      , {
+        "from":1718014736
+        , "to":1718020752
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1718020752
+        , "to":1717816272
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1718020752
+        , "to":1718020752
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1718021104
+        , "to":1717815568
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1718023328
+        , "to":1717815568
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1718023328
+        , "to":1717824336
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1723285744
+        , "to":1717816272
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+    ]
+  }
+  , "1707587872":
+  {
+    "nodes":
+    [
+      {
+        "name":"Exit"
+        , "id":1718433952
+        , "subtype":"exit"
+        , "start":"2.00"
+        , "end":"5.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Start Cycle":"2"
+            , "Latency":"3"
+            , "Exit FIFO Depth":"32"
+            , "Exit FIFO Width":"192"
+            , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Global variable"
+        , "id":1723135632
+        , "subtype":"pop"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Global variable"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":12
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1723138592
+        , "subtype":"default"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Constant Operand":"1 (0x1)"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":12
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Global variable"
+        , "id":1723141664
+        , "subtype":"pop"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Global variable"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Orch"
+        , "id":1723146816
+        , "subtype":"pop"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Orchestration Logic"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Entry"
+        , "id":1723503824
+        , "subtype":"entry"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Cluster Entry"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Dest"
+        , "id":1724492448
+        , "subtype":"ffwdDest"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Destination"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Select"
+        , "id":1724498464
+        , "subtype":"select"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"33-bit Select"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":12
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Dest"
+        , "id":1724499168
+        , "subtype":"ffwdDest"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Destination"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"And"
+        , "id":1724501808
+        , "subtype":"default"
+        , "start":"1.00"
+        , "end":"1.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"1-bit And"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":12
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Orch"
+        , "id":1724502160
+        , "subtype":"default"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Orchestration Logic"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":12
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1723135632
+        , "to":1718433952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1723135632
+        , "to":1723138592
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1723138592
+        , "to":1723135632
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1723141664
+        , "to":1718433952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1723141664
+        , "to":1723141664
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1723146816
+        , "to":1718433952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1723503824
+        , "to":1718433952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1723503824
+        , "to":1723135632
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1723503824
+        , "to":1723141664
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1723503824
+        , "to":1723146816
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1723503824
+        , "to":1724498464
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"96"
+          }
+        ]
+      }
+      , {
+        "from":1724492448
+        , "to":1724498464
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1724498464
+        , "to":1724498464
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1724498464
+        , "to":1724501808
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1724499168
+        , "to":1724501808
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724501808
+        , "to":1718433952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724501808
+        , "to":1723135632
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724501808
+        , "to":1723141664
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724501808
+        , "to":1723146816
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724501808
+        , "to":1724498464
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724501808
+        , "to":1724502160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724502160
+        , "to":1718433952
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+    ]
+  }
+  , "1708256336":
+  {
+    "nodes":
+    [
+      {
+        "name":"Exit"
+        , "id":1718446160
+        , "subtype":"exit"
+        , "start":"6.00"
+        , "end":"9.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Start Cycle":"6"
+            , "Latency":"3"
+            , "Exit FIFO Depth":"32"
+            , "Exit FIFO Width":"384"
+            , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Entry"
+        , "id":1723154992
+        , "subtype":"entry"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Cluster Entry"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Orch"
+        , "id":1723157888
+        , "subtype":"pop"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Orchestration Logic"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":15
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Dest"
+        , "id":1724672496
+        , "subtype":"ffwdDest"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Destination"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Select"
+        , "id":1724678512
+        , "subtype":"select"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"33-bit Select"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":15
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Dest"
+        , "id":1724678864
+        , "subtype":"ffwdDest"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Destination"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Xor"
+        , "id":1724681504
+        , "subtype":"default"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"1-bit Xor"
+            , "Constant Operand":"1 (0x1)"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Global variable"
+        , "id":1724681856
+        , "subtype":"pop"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Global variable"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":15
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Global variable"
+        , "id":1724684288
+        , "subtype":"pop"
+        , "start":"5.00"
+        , "end":"5.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Global variable"
+            , "Start Cycle":"5"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1724689440
+        , "subtype":"default"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"A"
+        , "id":1724690144
+        , "subtype":"default"
+        , "start":"0.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input Synchronization for 'A'"
+            , "Start Cycle":"0"
+            , "Latency":"6"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Ptr. Comp."
+        , "id":1724692992
+        , "subtype":"default"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Pointer Computation"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Or"
+        , "id":1724695328
+        , "subtype":"default"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"1-bit Or"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"N"
+        , "id":1724695680
+        , "subtype":"default"
+        , "start":"0.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input Synchronization for 'N'"
+            , "Start Cycle":"0"
+            , "Latency":"2"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"*"
+        , "id":1724697904
+        , "subtype":"default"
+        , "start":"2.00"
+        , "end":"5.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Multiply"
+            , "Start Cycle":"2"
+            , "Latency":"3"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Global variable"
+        , "id":1724698256
+        , "subtype":"pop"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Global variable"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":12
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1724703408
+        , "subtype":"default"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"B"
+        , "id":1724704112
+        , "subtype":"default"
+        , "start":"0.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input Synchronization for 'B'"
+            , "Start Cycle":"0"
+            , "Latency":"6"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Ptr. Comp."
+        , "id":1724706960
+        , "subtype":"default"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Pointer Computation"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Xor"
+        , "id":1724708768
+        , "subtype":"default"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"1-bit Xor"
+            , "Constant Operand":"1 (0x1)"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1724709120
+        , "subtype":"default"
+        , "start":"3.00"
+        , "end":"3.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Constant Operand":"1 (0x1)"
+            , "Start Cycle":"3"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":15
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Dest"
+        , "id":1724716048
+        , "subtype":"ffwdDest"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Destination"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"And"
+        , "id":1724718688
+        , "subtype":"default"
+        , "start":"2.00"
+        , "end":"2.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"1-bit And"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":15
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"?"
+        , "id":1724726720
+        , "subtype":"pop"
+        , "start":"6.00"
+        , "end":"6.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1723154992
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1723157888
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724678512
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724681856
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724684288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724684288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724698256
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724698256
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724708768
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724681856
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724726720
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723154992
+        , "to":1724726720
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"192"
+          }
+        ]
+      }
+      , {
+        "from":1723157888
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"2"
+          }
+        ]
+      }
+      , {
+        "from":1723157888
+        , "to":1724678512
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"2"
+          }
+        ]
+      }
+      , {
+        "from":1723157888
+        , "to":1724684288
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"2"
+          }
+        ]
+      }
+      , {
+        "from":1723157888
+        , "to":1724695328
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"2"
+          }
+        ]
+      }
+      , {
+        "from":1723157888
+        , "to":1724698256
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"2"
+          }
+        ]
+      }
+      , {
+        "from":1723157888
+        , "to":1724681856
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"2"
+          }
+        ]
+      }
+      , {
+        "from":1723157888
+        , "to":1724726720
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"2"
+          }
+        ]
+      }
+      , {
+        "from":1724672496
+        , "to":1724678512
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1724678512
+        , "to":1724678512
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1724678512
+        , "to":1724718688
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"33"
+          }
+        ]
+      }
+      , {
+        "from":1724678864
+        , "to":1724681504
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724681504
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724681504
+        , "to":1724695328
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724681856
+        , "to":1724689440
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724681856
+        , "to":1724697904
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724681856
+        , "to":1724709120
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724684288
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724684288
+        , "to":1724684288
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724684288
+        , "to":1724689440
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724689440
+        , "to":1724692992
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724690144
+        , "to":1724692992
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1724692992
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1724695328
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724695680
+        , "to":1724697904
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724697904
+        , "to":1724703408
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724698256
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724698256
+        , "to":1724698256
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724698256
+        , "to":1724703408
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724703408
+        , "to":1724706960
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1724704112
+        , "to":1724706960
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1724706960
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1724708768
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724709120
+        , "to":1724681856
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"3"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724716048
+        , "to":1724718688
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724718688
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724718688
+        , "to":1723157888
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724718688
+        , "to":1724678512
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724718688
+        , "to":1724684288
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724718688
+        , "to":1724698256
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724718688
+        , "to":1724681856
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Global variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"32"
+            , "Start Cycle":"3"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724718688
+        , "to":1724726720
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"1"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+      }
+      , {
+        "from":1724726720
+        , "to":1718446160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1724726720
+        , "to":1724726720
+        , "reverse":1
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Feedback Write"
+            , "Variable":"Unknown variable"
+            , "Feedback FIFO Depth":"1"
+            , "Feedback FIFO Width":"1"
+            , "Start Cycle":"6"
+            , "Latency":"0"
+          }
+        ]
+      }
+    ]
+  }
+  , "1709056544":
+  {
+    "nodes":
+    [
+      {
+        "name":"Exit"
+        , "id":1718009824
+        , "subtype":"exit"
+        , "start":"174.00"
+        , "end":"177.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Start Cycle":"174"
+            , "Latency":"3"
+            , "Exit FIFO Depth":"32"
+            , "Exit FIFO Width":"64"
+            , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Entry"
+        , "id":1718436800
+        , "subtype":"entry"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Cluster Entry"
+            , "Start Cycle":"169"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"f32 FP Accum"
+        , "id":1724760160
+        , "subtype":"default"
+        , "start":"170.00"
+        , "end":"174.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Floating-point Accumulator"
+            , "Start Cycle":"170"
+            , "Latency":"4"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":17
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1718436800
+        , "to":1724760160
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"128"
+          }
+        ]
+      }
+      , {
+        "from":1724760160
+        , "to":1718009824
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+    ]
+  }
+}

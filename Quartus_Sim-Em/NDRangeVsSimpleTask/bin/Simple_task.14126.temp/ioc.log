@@ -1,0 +1,23 @@
+Using build options: -cl-std=CL1.2 -g -s "/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl" -Xclang -Wuninitialized -Xclang -DINTELFPGA_CL=211 -Xclang -ivfsoverlay-lib/home/joerock/intelFPGA_pro/21.1/hld/linux64/lib/libaoc_clang_decrypt.so -I "/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask"
+Setting target instruction set architecture to: Default (Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2))
+Platform name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+Device name: Intel(R) FPGA Emulation Device
+Device version: OpenCL 1.2 
+Device vendor: Intel(R) Corporation
+Device profile: EMBEDDED_PROFILE
+Compilation started
+/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl:14:22: error: expected ';' after expression
+            tmp = 0.0
+                     ^
+                     ;
+/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl:17:43: error: expected ';' after expression
+                tmp += A[i*N+k] * B[k*N+j]
+                                          ^
+                                          ;
+/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/Simple_task.cl:19:27: error: expected ';' after expression
+            C[i*N+j] = tmp
+                          ^
+                          ;
+Compilation failed
+Failed to build program...: -15 (CL_COMPILE_PROGRAM_FAILURE)
+Compilation failed!
