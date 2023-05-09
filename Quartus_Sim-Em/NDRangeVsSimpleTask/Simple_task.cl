@@ -5,7 +5,7 @@ __kernel void mmul(
 	__global float* C)
 {
 
-    // Remember the unroll pragma #pragma unroll
+    // Remember the unroll pragma #pragma unroll -> especialmente en el pipeline
     float tmp = 0.0;
     for(int i = 0; i < N; i++)
     {

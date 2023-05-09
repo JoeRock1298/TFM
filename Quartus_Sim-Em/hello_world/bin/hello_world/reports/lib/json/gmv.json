@@ -1,0 +1,135 @@
+{
+  "nodes":
+  [
+    {
+      "name":"DDR"
+      , "id":1
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Interleaving":"Yes"
+          , "Interleave Size":"2048 MBs"
+          , "Channels":"1 channel"
+          , "Maximum bandwidth the BSP can deliver":"19200.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+          , "Channel DDR_Width (bits)":"512"
+        }
+      ]
+      , "type":"memsys"
+      , "children":
+      [
+        {
+          "name":"channel 0"
+          , "id":3
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"Memory Controller"
+      , "id":2
+      , "parent":"1"
+      , "bw":"19200.00"
+      , "num_channels":"1"
+      , "interleave":"1"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Maximum bandwidth the BSP can deliver":"19200.00 MB/s<br><small><i> Note: Realistic maximum bandwidth is about 90% of the above due to loss from interconnect and memory controller.</i></small>"
+        }
+      ]
+      , "type":"bb"
+    }
+    , {
+      "name":"Global Memory Interconnect"
+      , "id":4
+      , "parent":"1"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"SHARE"
+          , "id":5
+          , "type":"arb"
+        }
+        , {
+          "name":"Write Interconnect"
+          , "id":6
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Name":"DDR"
+              , "Interconnect Style":"tree"
+              , "Writes":"1"
+              , "User specified force-single-store-ring flag":"False"
+              , "Store Rings":"1"
+            }
+          ]
+          , "type":"bb"
+        }
+      ]
+    }
+    , {
+      "name":"Global Memory Stores"
+      , "id":7
+      , "parent":"1"
+      , "type":"bb"
+      , "children":
+      [
+        {
+          "name":"ST"
+          , "id":8
+          , "kwidth":"32"
+          , "mwidth":"512"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Start Cycle":"1"
+              , "Latency":"2 cycles"
+              , "Width":"32 bits"
+              , "DDR_Width":"512 bits"
+              , "Uses Write Ack":"No"
+              , "LSU Style":"BURST-COALESCED"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device/hello_world.cl"
+                , "line":29
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":3
+      , "to":2
+    }
+    , {
+      "from":2
+      , "to":3
+    }
+    , {
+      "from":6
+      , "to":5
+    }
+    , {
+      "from":5
+      , "to":2
+    }
+    , {
+      "from":8
+      , "to":6
+    }
+  ]
+}

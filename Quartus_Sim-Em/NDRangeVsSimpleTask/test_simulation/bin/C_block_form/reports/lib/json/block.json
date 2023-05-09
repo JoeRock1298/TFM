@@ -1,0 +1,1394 @@
+{
+  "1528458032":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 1"
+        , "id":1532697616
+        , "start":"292.00"
+        , "end":"398.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body_mmuls_c0_enter13281_mmul29"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"292"
+            , "Cluster Latency":"106"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1532708128
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"292"
+                , "Cluster Logic Latency":"103"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1536216624
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"395"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"512"
+                , "Exit FIFO Width":"64"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"simple.barrier"
+        , "id":1535861488
+        , "start":"398.00"
+        , "end":"528.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"simple.barrier"
+            , "Start Cycle":"398"
+            , "Latency":"130"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":104
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Loop Input"
+        , "id":1538014832
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"mmul.B1, mmul.B0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1539115776
+        , "start":"528.00"
+        , "end":"528.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Start Cycle":"528"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":106
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Compare"
+        , "id":1549406256
+        , "start":"528.00"
+        , "end":"528.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Compare"
+            , "Start Cycle":"528"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":87
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1549490096
+        , "start":"528.00"
+        , "end":"528.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Constant Operand":"32 (0x20)"
+            , "Start Cycle":"528"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":105
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1550353296
+        , "start":"161.00"
+        , "end":"162.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"32 bits"
+            , "LSU Style":"Pipelined never-stall"
+            , "Stall-free":"Yes"
+            , "Global Memory":"No"
+            , "Start Cycle":"161"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":94
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"<<"
+        , "id":1553179392
+        , "start":"161.00"
+        , "end":"161.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"64-bit Left Shift"
+            , "Constant Operand":"12 (0xC)"
+            , "Start Cycle":"161"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"B"
+        , "id":1553695552
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input Synchronization for 'B'"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"wg.limiter.enter"
+        , "id":1553920016
+        , "start":"160.00"
+        , "end":"161.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"wg.limiter.enter"
+            , "Start Cycle":"160"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":94
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"A"
+        , "id":1553982624
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input Synchronization for 'A'"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1554179424
+        , "start":"1.00"
+        , "end":"161.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"32 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+            , "Start Cycle":"1"
+            , "Latency":"160"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":93
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1554932560
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":94
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Ptr. Comp."
+        , "id":1555316016
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Pointer Computation"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":93
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"LD"
+        , "id":1555800336
+        , "start":"1.00"
+        , "end":"161.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Load"
+            , "Width":"32 bits"
+            , "LSU Style":"Burst-coalesced cached"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+            , "Start Cycle":"1"
+            , "Latency":"160"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":94
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Ptr. Comp."
+        , "id":1555801312
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Pointer Computation"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":94
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"simple.barrier"
+        , "id":1558230064
+        , "start":"162.00"
+        , "end":"292.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"simple.barrier"
+            , "Start Cycle":"162"
+            , "Latency":"130"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":96
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1558982944
+        , "start":"1.00"
+        , "end":"528.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Constant Operand":"1 (0x1)"
+            , "Start Cycle":"1"
+            , "Latency":"527"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":87
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"<<"
+        , "id":1560938064
+        , "start":"161.00"
+        , "end":"161.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"64-bit Left Shift"
+            , "Constant Operand":"7 (0x7)"
+            , "Start Cycle":"161"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1560965600
+        , "start":"161.00"
+        , "end":"162.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"32 bits"
+            , "LSU Style":"Pipelined never-stall"
+            , "Stall-free":"Yes"
+            , "Global Memory":"No"
+            , "Start Cycle":"161"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":93
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"+"
+        , "id":1560966864
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Integer Add"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":93
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"wg.limiter.enter"
+        , "id":1561355104
+        , "start":"160.00"
+        , "end":"161.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"wg.limiter.enter"
+            , "Start Cycle":"160"
+            , "Latency":"1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":93
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1532708128
+        , "to":1536216624
+      }
+      , {
+        "from":1536216624
+        , "to":1535861488
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1539115776
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1549406256
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1554932560
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1560966864
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1549490096
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1560966864
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1549490096
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1550353296
+        , "to":1558230064
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1553179392
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1553179392
+        , "to":1550353296
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1553695552
+        , "to":1555801312
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1553920016
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1553920016
+        , "to":1553179392
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1560965600
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1553982624
+        , "to":1555316016
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1550353296
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1554179424
+        , "to":1560965600
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1554932560
+        , "to":1555801312
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1555316016
+        , "to":1554179424
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1550353296
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1554179424
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1555800336
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1560965600
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1555800336
+        , "to":1550353296
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1555801312
+        , "to":1555800336
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1558230064
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1558982944
+        , "to":1549406256
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1558982944
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1539115776
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1560938064
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1560938064
+        , "to":1560965600
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1536216624
+        , "to":1538014832
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1539115776
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1554932560
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1560965600
+        , "to":1558230064
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":1560966864
+        , "to":1555316016
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1561355104
+        , "to":1532708128
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1561355104
+        , "to":1560938064
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1538014832
+        , "to":1558982944
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+    ]
+  }
+  , "1528458112":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 2"
+        , "id":1536353824
+        , "start":"0.00"
+        , "end":"8.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_end47_mmuls_c0_enter144_mmul2"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"0"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1536360704
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"0"
+                , "Cluster Logic Latency":"5"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1536407024
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"5"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"128"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"Input"
+        , "id":1547886688
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input"
+            , "Preceding Blocks":"mmul.B1"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"ST"
+        , "id":1554829696
+        , "start":"8.00"
+        , "end":"10.00"
+        , "subtype":"load/store"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Store"
+            , "Width":"32 bits"
+            , "LSU Style":"Burst-coalesced"
+            , "Stall-free":"No"
+            , "Global Memory":"Yes"
+            , "Start Cycle":"8"
+            , "Latency":"2"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":110
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1536360704
+        , "to":1536407024
+      }
+      , {
+        "from":1547886688
+        , "to":1554829696
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":1547886688
+        , "to":1536360704
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+      , {
+        "from":1536407024
+        , "to":1554829696
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"128"
+          }
+        ]
+      }
+      , {
+        "from":1547886688
+        , "to":1536360704
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+    ]
+  }
+  , "1528466352":
+  {
+    "nodes":
+    [
+      {
+        "name":"Cluster 0"
+        , "id":1531725168
+        , "start":"1.00"
+        , "end":"9.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_entry_mmuls_c0_enter_mmul1"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"1"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":1531731664
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"1"
+                , "Cluster Logic Latency":"5"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":1532019152
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"6"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"448"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1531731664
+        , "to":1532019152
+      }
+    ]
+  }
+}

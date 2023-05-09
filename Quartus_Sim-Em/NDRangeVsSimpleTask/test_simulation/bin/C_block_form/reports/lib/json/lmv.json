@@ -1,0 +1,1911 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"mmul"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":8
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":93
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"Awrk"
+              , "Start Cycle":"161"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":9
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":94
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"Bwrk"
+              , "Start Cycle":"161"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":10
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"1024 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Awrk"
+              , "Start Cycle":"294"
+              , "Latency":"3"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":11
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"293"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":12
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"296"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":13
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"299"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":14
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"302"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":15
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"305"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":16
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"308"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":17
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"311"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":18
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"314"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":19
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"317"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":20
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"320"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":21
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"323"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":22
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"326"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":23
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"329"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":24
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"332"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":25
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"335"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":26
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"338"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":27
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"341"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":28
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"344"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":29
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"347"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":30
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"350"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":31
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"353"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":32
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"356"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":33
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"359"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":34
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"362"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":35
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"365"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":36
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":37
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":38
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":39
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":40
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":41
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":42
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"Bwrk"
+              , "Start Cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":48
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":49
+              , "name":"Awrk"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"C_block_form.cl"
+                    , "line":50
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":50
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"C_block_form.cl"
+                        , "line":50
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":51
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":52
+                      , "name":"W"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n1 read ports/bank\n1 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"1"
+                      , "Number of write ports per bank":"1"
+                      , "Total replication":"3"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Requested size":"16384 bytes"
+                  , "Implemented size":"16384 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"1024 bits"
+                  , "Bank depth":"128 words"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"3"
+                  , "Additional Information":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/chn1469549457114.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"memsys"
+              , "id":53
+              , "name":"Bwrk"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"C_block_form.cl"
+                    , "line":50
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":54
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"C_block_form.cl"
+                        , "line":50
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":55
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":56
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":57
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":58
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":59
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":60
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":61
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":62
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":63
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":64
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":65
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":66
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":67
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":68
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":69
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":70
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":71
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":72
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":73
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":74
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":75
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":76
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":77
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":78
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":79
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":80
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":81
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":82
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":83
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":84
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":85
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":86
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":87
+                      , "name":"W"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"33 total ports/bank\n32 read ports/bank\n1 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"33"
+                      , "Number of read ports per bank":"32"
+                      , "Number of write ports per bank":"1"
+                      , "Total replication":"33"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Requested size":"16384 bytes"
+                  , "Implemented size":"180224 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"32 bits"
+                  , "Bank depth":"4096 words"
+                  , "Number of replicates":"11"
+                  , "Number of private copies":"3"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each bank, 11 replicates were created to efficiently support multiple accesses"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Running memory at 2x clock to support more concurrent ports"
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/chn1469549457114.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":51
+      , "to":10
+    }
+    , {
+      "from":8
+      , "to":52
+    }
+    , {
+      "from":55
+      , "to":11
+    }
+    , {
+      "from":56
+      , "to":12
+    }
+    , {
+      "from":57
+      , "to":13
+    }
+    , {
+      "from":58
+      , "to":14
+    }
+    , {
+      "from":59
+      , "to":15
+    }
+    , {
+      "from":60
+      , "to":16
+    }
+    , {
+      "from":61
+      , "to":17
+    }
+    , {
+      "from":62
+      , "to":18
+    }
+    , {
+      "from":63
+      , "to":19
+    }
+    , {
+      "from":64
+      , "to":20
+    }
+    , {
+      "from":65
+      , "to":21
+    }
+    , {
+      "from":66
+      , "to":22
+    }
+    , {
+      "from":67
+      , "to":23
+    }
+    , {
+      "from":68
+      , "to":24
+    }
+    , {
+      "from":69
+      , "to":25
+    }
+    , {
+      "from":70
+      , "to":26
+    }
+    , {
+      "from":71
+      , "to":27
+    }
+    , {
+      "from":72
+      , "to":28
+    }
+    , {
+      "from":73
+      , "to":29
+    }
+    , {
+      "from":74
+      , "to":30
+    }
+    , {
+      "from":75
+      , "to":31
+    }
+    , {
+      "from":76
+      , "to":32
+    }
+    , {
+      "from":77
+      , "to":33
+    }
+    , {
+      "from":78
+      , "to":34
+    }
+    , {
+      "from":79
+      , "to":35
+    }
+    , {
+      "from":80
+      , "to":36
+    }
+    , {
+      "from":81
+      , "to":37
+    }
+    , {
+      "from":82
+      , "to":38
+    }
+    , {
+      "from":83
+      , "to":39
+    }
+    , {
+      "from":84
+      , "to":40
+    }
+    , {
+      "from":85
+      , "to":41
+    }
+    , {
+      "from":86
+      , "to":42
+    }
+    , {
+      "from":9
+      , "to":87
+    }
+  ]
+}

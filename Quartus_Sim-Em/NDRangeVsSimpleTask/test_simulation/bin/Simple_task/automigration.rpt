@@ -38,8 +38,8 @@ Info: Running Quartus Prime Shell
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed May  3 13:19:03 2023
-    Info: System process ID: 17599
+    Info: Processing started: Fri May  5 14:23:41 2023
+    Info: System process ID: 5905
 Info: Command: quartus_sh -t /home/joerock/intelFPGA_pro/21.1/hld/ip/board/migrate/pre_skipbak/pre_skipbak.tcl a10_ref a10gx -1
 Info: Quartus(args): a10_ref a10gx -1
 Info: Using INI file /home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/bin/Simple_task/quartus.ini
@@ -77,9 +77,9 @@ couldn't read file "scripts/qar_ip_files.tcl": no such file or directory
 ------------------------------------------------
 Error (23031): Evaluation of Tcl script /home/joerock/intelFPGA_pro/21.1/hld/ip/board/migrate/pre_skipbak/pre_skipbak.tcl unsuccessful
 Error: Quartus Prime Shell was unsuccessful. 2 errors, 0 warnings
-    Error: Peak virtual memory: 876 megabytes
-    Error: Processing ended: Wed May  3 13:19:03 2023
+    Error: Peak virtual memory: 884 megabytes
+    Error: Processing ended: Fri May  5 14:23:41 2023
     Error: Elapsed time: 00:00:00
-    Error: System process ID: 17599
+    Error: System process ID: 5905
 ------------------------------
 

@@ -1,0 +1,42 @@
+{
+  "name":"loop_attributes"
+  , "id":4294967295
+  , "nodes":
+  [
+    {
+      "name":"hello_world"
+      , "id":1877126176
+      , "clk":"No"
+      , "fmax":"240.00"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device/hello_world.cl"
+            , "line":24
+          }
+        ]
+      ]
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"hello_world.B0"
+          , "id":1875647616
+          , "af":"240.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"3.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+}

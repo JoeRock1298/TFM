@@ -1,0 +1,146 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units"]
+    , "children":
+    [
+      {
+        "name":"mmul"
+        , "data":
+        [
+          "NDRange"
+          , "No"
+          , "n/a"
+          , 1
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: NDRange"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 128"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":50
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"mmul"
+        , "data":
+        [13106, 23166.7, 541, 36.5, 301]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":50
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [4121, 5284, 0, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [65540, 131080, 176, 0, 0]
+      }
+      , {
+        "name":"System description ROM"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [0, 67, 2, 0, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [82767, 159597, 719, 36, 301]
+        , "data_percent":
+        [9.68715, 9.33977, 26.502, 2.43742]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [854400, 1708800, 2713, 1518, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+      {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":93
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+              , "line":94
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

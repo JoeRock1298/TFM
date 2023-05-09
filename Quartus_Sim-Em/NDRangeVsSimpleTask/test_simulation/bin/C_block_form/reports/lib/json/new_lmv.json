@@ -1,0 +1,2889 @@
+{
+  "nodes":
+  [
+    {
+      "name":"mmul"
+      , "id":1528399224
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":1
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"Awrk"
+              , "id":2
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                          , "line":"50"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"16 kilobytes"
+                  , "Implemented size":"48 kilobytes = (3 private copies) x (128 words per bank) x (128 bytes per word)"
+                  , "Memory Usage":"32 RAMs"
+                  , "Number of banks":"1"
+                  , "Bank width (word size)":"128 bytes"
+                  , "Bank depth":"128 words"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"3"
+                  , "RAM Mode":"Simple dual-port"
+                  , "Pump configuration":"Single-pumped"
+                  , "Additional information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"In each private copy:</br>  Variable 'Awrk' occupies memory words [0-127]."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                    }
+                  ]
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/chn1469549457114.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                    , "line":50
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":3
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Memory Usage":"32 RAMs"
+                      , "Bank width":"128 bytes"
+                      , "Bank depth":"128 words"
+                      , "Implemented bank size":"48 kilobytes = (3 private copies) x (128 words) x (128 bytes per word)"
+                      , "Number of active ports":"2"
+                      , "Number of read ports":"1"
+                      , "Number of write ports":"1"
+                      , "Additional information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:</br>  Variable 'Awrk' occupies memory words [0-127]."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                        , "line":50
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":4
+                      , "padding":"0"
+                      , "depth":"128"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (128 words) x (128 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"1"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Awrk' occupies memory words [0-127]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":5
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":6
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"128 bytes"
+                            , "Depth per copy (including padding)":"128 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Awrk' occupies memory words [0-127]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Bwrk"
+              , "id":7
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                          , "line":"50"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"16 kilobytes"
+                  , "Implemented size":"528 kilobytes = (11 replicates) x (3 private copies) x (4096 words per bank) x (4 bytes per word)"
+                  , "Memory Usage":"352 RAMs"
+                  , "Number of banks":"1"
+                  , "Bank width (word size)":"4 bytes"
+                  , "Bank depth":"4096 words"
+                  , "Number of replicates":"11"
+                  , "Number of private copies":"3"
+                  , "RAM Mode":"True dual-port"
+                  , "Pump configuration":"Double-pumped"
+                  , "Additional information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each bank, 11 replicates were created  to efficiently support multiple accesses."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Running memory at 2x clock to support more concurrent ports"
+                    }
+                  ]
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/chn1469549457114.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                    , "line":50
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":8
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Memory Usage":"352 RAMs"
+                      , "Bank width":"4 bytes"
+                      , "Bank depth":"4096 words"
+                      , "Implemented bank size":"528 kilobytes = (11 replicates) x (3 private copies) x (4096 words) x (4 bytes per word)"
+                      , "Number of active ports":"43"
+                      , "Number of read ports":"32"
+                      , "Number of write ports":"11"
+                      , "Number of un-used ports":"1"
+                      , "Additional information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each bank, 11 replicates were created  to efficiently support multiple accesses."
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                        , "line":50
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":9
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":10
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":11
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":12
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":13
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 1"
+                      , "id":14
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":15
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":16
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":17
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":18
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 2"
+                      , "id":19
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":20
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":21
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":22
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":23
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 3"
+                      , "id":24
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":25
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":26
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":27
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":28
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 4"
+                      , "id":29
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":30
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":31
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":32
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":33
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 5"
+                      , "id":34
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":35
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":36
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":37
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":38
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 6"
+                      , "id":39
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":40
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":41
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":42
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":43
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 7"
+                      , "id":44
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":45
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":46
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":47
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":48
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 8"
+                      , "id":49
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":50
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":51
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":52
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":53
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 9"
+                      , "id":54
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"3"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":55
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":56
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":57
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":58
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                    , {
+                      "name":"Replicate 10"
+                      , "id":59
+                      , "padding":"0"
+                      , "depth":"4096"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"48 kilobytes = (3 private copies) x (4096 words) x (4 bytes per word)"
+                          , "Memory Usage":"32 RAMs"
+                          , "Number of physical ports":"4"
+                          , "Number of read ports":"2"
+                          , "Number of write ports":"1"
+                          , "Number of un-used ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                            , "line":50
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":60
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"R"
+                          , "id":61
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":62
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":3
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"4 bytes"
+                            , "Depth per copy (including padding)":"4096 words"
+                            , "Number of private copies":"3"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'Bwrk' occupies memory words [0-4095]."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 3 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td></td><td></td></tr><tr><td>Private-copy bits</td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 1: </td><td>0</td><td>1</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr><tr><td>Private copy 2: </td><td>1</td><td>0</td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":1528584168
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"1024 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Awrk"
+              , "Start cycle":"294"
+              , "Latency":"3"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1528577432
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Stores to":"Awrk"
+              , "Start cycle":"161"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":93
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528571128
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"293"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528588056
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"296"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528589384
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"299"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528590712
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"302"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528592040
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"305"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528593368
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"308"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528594696
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"311"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528596024
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"314"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528597352
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"317"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528598680
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"320"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528600008
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"323"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528601336
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"326"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528602664
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"329"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528603992
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"332"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528562824
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"335"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528564152
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"338"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528565480
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"341"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528566808
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"344"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528568136
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"347"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528569464
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"350"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528586216
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"353"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528625176
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"356"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528626376
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"359"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528627704
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"362"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528629032
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"365"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528630360
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528631688
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528633016
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528634344
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528635672
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528637000
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Load"
+          , "id":1528638328
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"Bwrk"
+              , "Start cycle":"368"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":102
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":1528578504
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Stores to":"Bwrk"
+              , "Start cycle":"161"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":94
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":5
+      , "to":1528584168
+    }
+    , {
+      "from":1528577432
+      , "to":6
+    }
+    , {
+      "from":10
+      , "to":1528588056
+    }
+    , {
+      "from":11
+      , "to":1528589384
+    }
+    , {
+      "from":12
+      , "to":1528590712
+    }
+    , {
+      "from":1528578504
+      , "to":13
+    }
+    , {
+      "from":15
+      , "to":1528593368
+    }
+    , {
+      "from":16
+      , "to":1528594696
+    }
+    , {
+      "from":17
+      , "to":1528596024
+    }
+    , {
+      "from":1528578504
+      , "to":18
+    }
+    , {
+      "from":20
+      , "to":1528598680
+    }
+    , {
+      "from":21
+      , "to":1528600008
+    }
+    , {
+      "from":22
+      , "to":1528601336
+    }
+    , {
+      "from":1528578504
+      , "to":23
+    }
+    , {
+      "from":25
+      , "to":1528603992
+    }
+    , {
+      "from":26
+      , "to":1528562824
+    }
+    , {
+      "from":27
+      , "to":1528564152
+    }
+    , {
+      "from":1528578504
+      , "to":28
+    }
+    , {
+      "from":30
+      , "to":1528566808
+    }
+    , {
+      "from":31
+      , "to":1528568136
+    }
+    , {
+      "from":32
+      , "to":1528569464
+    }
+    , {
+      "from":1528578504
+      , "to":33
+    }
+    , {
+      "from":35
+      , "to":1528625176
+    }
+    , {
+      "from":36
+      , "to":1528626376
+    }
+    , {
+      "from":37
+      , "to":1528627704
+    }
+    , {
+      "from":1528578504
+      , "to":38
+    }
+    , {
+      "from":40
+      , "to":1528629032
+    }
+    , {
+      "from":41
+      , "to":1528630360
+    }
+    , {
+      "from":42
+      , "to":1528631688
+    }
+    , {
+      "from":1528578504
+      , "to":43
+    }
+    , {
+      "from":45
+      , "to":1528634344
+    }
+    , {
+      "from":46
+      , "to":1528635672
+    }
+    , {
+      "from":47
+      , "to":1528637000
+    }
+    , {
+      "from":1528578504
+      , "to":48
+    }
+    , {
+      "from":50
+      , "to":1528571128
+    }
+    , {
+      "from":51
+      , "to":1528592040
+    }
+    , {
+      "from":52
+      , "to":1528633016
+    }
+    , {
+      "from":1528578504
+      , "to":53
+    }
+    , {
+      "from":55
+      , "to":1528597352
+    }
+    , {
+      "from":56
+      , "to":1528602664
+    }
+    , {
+      "from":57
+      , "to":1528638328
+    }
+    , {
+      "from":1528578504
+      , "to":58
+    }
+    , {
+      "from":60
+      , "to":1528565480
+    }
+    , {
+      "from":61
+      , "to":1528586216
+    }
+    , {
+      "from":1528578504
+      , "to":62
+    }
+  ]
+}

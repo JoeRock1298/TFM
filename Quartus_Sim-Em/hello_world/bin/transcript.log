@@ -1,0 +1,445 @@
+# 
+# do mpsim/sim/msim_run.tcl
+# Questa  Intel Starter FPGA Edition-64 vsim 2021.2 Simulator 2021.04 Apr 13 2021
+# [exec] file_copy
+# List Of Command Line Aliases
+# 
+# file_copy                                         -- Copy ROM/RAM files to simulation directory
+# 
+# dev_com                                           -- Compile device library files
+# 
+# com                                               -- Compile the design files in correct order
+# 
+# elab                                              -- Elaborate top level design
+# 
+# elab_debug                                        -- Elaborate the top level design with -voptargs=+acc option
+# 
+# ld                                                -- Compile all the design files and elaborate the top level design
+# 
+# ld_debug                                          -- Compile all the design files and elaborate the top level design with  -voptargs=+acc
+# 
+# 
+# 
+# List Of Variables
+# 
+# TOP_LEVEL_NAME                                    -- Top level module name.
+#                                                      For most designs, this should be overridden
+#                                                      to enable the elab/elab_debug aliases.
+# 
+# SYSTEM_INSTANCE_NAME                              -- Instantiated system module name inside top level module.
+# 
+# QSYS_SIMDIR                                       -- Qsys base simulation directory.
+# 
+# QUARTUS_INSTALL_DIR                               -- Quartus installation directory.
+# 
+# USER_DEFINED_COMPILE_OPTIONS                      -- User-defined compile options, added to com/dev_com aliases.
+# 
+# USER_DEFINED_VHDL_COMPILE_OPTIONS                 -- User-defined vhdl compile options, added to com/dev_com aliases.
+# 
+# USER_DEFINED_VERILOG_COMPILE_OPTIONS              -- User-defined verilog compile options, added to com/dev_com aliases.
+# 
+# USER_DEFINED_ELAB_OPTIONS                         -- User-defined elaboration options, added to elab/elab_debug aliases.
+# 
+# SILENCE                                           -- Set to true to suppress all informational and/or warning messages in the generated simulation script. 
+# 
+# FORCE_MODELSIM_AE_SELECTION                       -- Set to true to force to select Modelsim AE always.
+# 1
+# +nowarnTFMPC +nowarnBSOB -suppress 1130 -suppress 2732 -suppress 3584 -suppress 3839 -suppress 12027 -suppress 14408 -dpioutoftheblue 1 -sv_lib /home/joerock/intelFPGA_pro/21.1/hld/host/linux64/lib/libaoc_cosim_msim -voptargs=+acc
+# [exec] elab
+# Loading /tmp/joerock@localhost.localdomain_dpi_9587/linux_x86_64_gcc-7.4.0/export_tramp.so
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1295): (vopt-13314) Defaulting port 'm_arb_request' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1296): (vopt-13314) Defaulting port 'm_arb_enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1297): (vopt-13314) Defaulting port 'm_arb_read' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1298): (vopt-13314) Defaulting port 'm_arb_write' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1299): (vopt-13314) Defaulting port 'm_arb_burstcount' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1300): (vopt-13314) Defaulting port 'm_arb_address' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1301): (vopt-13314) Defaulting port 'm_arb_writedata' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1302): (vopt-13314) Defaulting port 'm_arb_byteenable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1585): (vopt-13314) Defaulting port 'm_arb_request' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1586): (vopt-13314) Defaulting port 'm_arb_enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1587): (vopt-13314) Defaulting port 'm_arb_read' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1588): (vopt-13314) Defaulting port 'm_arb_write' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1589): (vopt-13314) Defaulting port 'm_arb_burstcount' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1590): (vopt-13314) Defaulting port 'm_arb_address' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1591): (vopt-13314) Defaulting port 'm_arb_writedata' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1592): (vopt-13314) Defaulting port 'm_arb_byteenable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1100): (vopt-13314) Defaulting port 'm_arb_request' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1101): (vopt-13314) Defaulting port 'm_arb_enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1102): (vopt-13314) Defaulting port 'm_arb_read' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1103): (vopt-13314) Defaulting port 'm_arb_write' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1104): (vopt-13314) Defaulting port 'm_arb_burstcount' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1105): (vopt-13314) Defaulting port 'm_arb_address' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1106): (vopt-13314) Defaulting port 'm_arb_writedata' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(1107): (vopt-13314) Defaulting port 'm_arb_byteenable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(634): (vopt-13314) Defaulting port 'global_offset' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(638): (vopt-13314) Defaulting port 'global_id' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(639): (vopt-13314) Defaulting port 'local_id' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(640): (vopt-13314) Defaulting port 'group_id' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(641): (vopt-13314) Defaulting port 'global_size' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(642): (vopt-13314) Defaulting port 'local_size' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(643): (vopt-13314) Defaulting port 'num_groups' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(750): (vopt-13314) Defaulting port 'gmem0_DDR_mtree_avm_enable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(751): (vopt-13314) Defaulting port 'gmem0_DDR_mtree_avm_read' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(752): (vopt-13314) Defaulting port 'gmem0_DDR_mtree_avm_write' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(753): (vopt-13314) Defaulting port 'gmem0_DDR_mtree_avm_address' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(754): (vopt-13314) Defaulting port 'gmem0_DDR_mtree_avm_writedata' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(755): (vopt-13314) Defaulting port 'gmem0_DDR_mtree_avm_byteenable' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/kernel_system/kernel_system_hello_world_sys/hello_world_sys_140/sim/hello_world_sys.v(759): (vopt-13314) Defaulting port 'gmem0_DDR_mtree_avm_burstcount' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/mpsim/mpsim_osi/aoc_sim_mm_master_dpi_bfm_10/sim/aoc_sim_mm_master_dpi_bfm.sv(445): (vopt-2240) Treating stand-alone use of function '__ihc_aoc_mm_slave_read' as an implicit VOID cast.
+# ** Warning: /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/hello_world/ip/mpsim/mpsim_osi/aoc_sim_mm_master_dpi_bfm_10/sim/aoc_sim_mm_master_dpi_bfm.sv(486): (vopt-2240) Treating stand-alone use of function '__ihc_aoc_mm_slave_read' as an implicit VOID cast.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=40.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 13 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.mpsim(fast)
+# Loading mpsim_clk_rst.mpsim_clk_rst(fast)
+# Loading sv_std.std
+# Loading hls_sim_clock_reset_10.hls_sim_clock_reset(fast)
+# Loading mpsim_ki.mpsim_ki(fast)
+# Loading kernel_interface_151.mpsim_ki_kernel_interface_151_3vpvdiy(fast)
+# Loading altera_avalon_mm_bridge_2001.mpsim_ki_altera_avalon_mm_bridge_2001_k2bg7dq(fast)
+# Loading altera_address_span_extender_1920.mpsim_ki_altera_address_span_extender_1920_nhiitjy(fast)
+# Loading sw_reset_100.sw_reset(fast)
+# Loading global_routing_reset_100.global_routing(fast)
+# Loading altera_avalon_mm_bridge_2001.mpsim_ki_altera_avalon_mm_bridge_2001_k2bg7dq(fast__1)
+# Loading mem_org_mode_100.mem_org_mode(fast)
+# Loading altera_irq_bridge_1920.mpsim_ki_altera_irq_bridge_1920_sqfym3y(fast)
+# Loading version_id_100.version_id(fast)
+# Loading altera_reset_controller_1921.altera_reset_controller(fast)
+# Loading altera_reset_controller_1921.altera_reset_synchronizer(fast)
+# Loading altera_reset_controller_1921.altera_reset_synchronizer(fast__1)
+# Loading altera_mm_interconnect_1920.mpsim_ki_altera_mm_interconnect_1920_wssxlcy(fast)
+# Loading altera_merlin_master_translator_191.mpsim_ki_altera_merlin_master_translator_191_g7h47bq(fast)
+# Loading altera_merlin_slave_translator_191.mpsim_ki_altera_merlin_slave_translator_191_x56fcki(fast)
+# Loading altera_merlin_master_agent_191.mpsim_ki_altera_merlin_master_agent_191_mpbm6tq(fast)
+# Loading altera_merlin_slave_agent_191.mpsim_ki_altera_merlin_slave_agent_191_ncfkfri(fast)
+# Loading altera_merlin_slave_agent_191.altera_merlin_burst_uncompressor(fast)
+# Loading altera_avalon_sc_fifo_1930.mpsim_ki_altera_avalon_sc_fifo_1930_pqv24kq(fast)
+# Loading altera_avalon_sc_fifo_1930.mpsim_ki_altera_avalon_sc_fifo_1930_pqv24kq(fast__1)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_kinmtha(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_kinmtha_default_decode(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_s4626oa(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_s4626oa_default_decode(fast)
+# Loading altera_merlin_demultiplexer_1921.mpsim_ki_altera_merlin_demultiplexer_1921_cj4cjji(fast)
+# Loading altera_merlin_multiplexer_1921.mpsim_ki_altera_merlin_multiplexer_1921_snhb7mi(fast)
+# Loading altera_merlin_multiplexer_1921.mpsim_ki_altera_merlin_multiplexer_1921_plsvwjy(fast)
+# Loading hs_clk_xer_1931.mpsim_ki_hs_clk_xer_1931_fr3kkfi(fast)
+# Loading hs_clk_xer_1931.altera_avalon_st_clock_crosser(fast)
+# Loading hs_clk_xer_1931.altera_std_synchronizer_nocut(fast)
+# Loading altera_mm_interconnect_1920.mpsim_ki_altera_mm_interconnect_1920_afgt4qi(fast)
+# Loading altera_merlin_master_translator_191.mpsim_ki_altera_merlin_master_translator_191_g7h47bq(fast__1)
+# Loading altera_merlin_slave_translator_191.mpsim_ki_altera_merlin_slave_translator_191_x56fcki(fast__1)
+# Loading altera_merlin_slave_translator_191.mpsim_ki_altera_merlin_slave_translator_191_x56fcki(fast__2)
+# Loading altera_merlin_slave_translator_191.mpsim_ki_altera_merlin_slave_translator_191_x56fcki(fast__3)
+# Loading altera_merlin_slave_translator_191.mpsim_ki_altera_merlin_slave_translator_191_x56fcki(fast__4)
+# Loading altera_merlin_slave_translator_191.mpsim_ki_altera_merlin_slave_translator_191_x56fcki(fast__5)
+# Loading altera_merlin_master_agent_191.mpsim_ki_altera_merlin_master_agent_191_mpbm6tq(fast__1)
+# Loading altera_merlin_slave_agent_191.mpsim_ki_altera_merlin_slave_agent_191_ncfkfri(fast__1)
+# Loading altera_merlin_slave_agent_191.altera_merlin_burst_uncompressor(fast__1)
+# Loading altera_avalon_sc_fifo_1930.mpsim_ki_altera_avalon_sc_fifo_1930_pqv24kq(fast__2)
+# Loading altera_merlin_slave_agent_191.mpsim_ki_altera_merlin_slave_agent_191_ncfkfri(fast__2)
+# Loading altera_merlin_slave_agent_191.altera_merlin_burst_uncompressor(fast__2)
+# Loading altera_avalon_sc_fifo_1930.mpsim_ki_altera_avalon_sc_fifo_1930_pqv24kq(fast__3)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_rbohmmi(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_rbohmmi_default_decode(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_wxeu33a(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_wxeu33a_default_decode(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_6jogrdq(fast)
+# Loading altera_merlin_router_1920.mpsim_ki_altera_merlin_router_1920_6jogrdq_default_decode(fast)
+# Loading altera_merlin_traffic_limiter_191.mpsim_ki_altera_merlin_traffic_limiter_191_kcba44q(fast)
+# Loading altera_merlin_demultiplexer_1921.mpsim_ki_altera_merlin_demultiplexer_1921_ipkbo7a(fast)
+# Loading altera_merlin_multiplexer_1921.mpsim_ki_altera_merlin_multiplexer_1921_47os7ei(fast)
+# Loading altera_merlin_demultiplexer_1921.mpsim_ki_altera_merlin_demultiplexer_1921_2haef2a(fast)
+# Loading altera_merlin_multiplexer_1921.mpsim_ki_altera_merlin_multiplexer_1921_hgj2oda(fast)
+# Loading altera_merlin_multiplexer_1921.altera_merlin_arbitrator(fast)
+# Loading altera_merlin_multiplexer_1921.altera_merlin_arb_adder(fast)
+# Loading altera_merlin_width_adapter_1920.mpsim_ki_altera_merlin_width_adapter_1920_owt3fga(fast)
+# Loading altera_merlin_width_adapter_1920.altera_merlin_burst_uncompressor(fast)
+# Loading altera_merlin_width_adapter_1920.mpsim_ki_altera_merlin_width_adapter_1920_yiwuv6i(fast)
+# Loading mpsim_oirq.mpsim_oirq(fast)
+# Loading aoc_sim_main_dpi_controller_10.aoc_sim_main_dpi_controller(fast)
+# Loading mpsim_osi.mpsim_osi(fast)
+# Loading altera_common_sv_packages.verbosity_pkg(fast)
+# Loading altera_common_sv_packages.avalon_mm_pkg(fast)
+# Loading aoc_sim_mm_master_dpi_bfm_10.aoc_sim_mm_master_dpi_bfm(fast)
+# Loading altera_common_sv_packages.avalon_utilities_pkg(fast)
+# Loading aoc_sim_mm_master_dpi_bfm_10.altera_avalon_mm_master_bfm(fast)
+# Loading aoc_sim_mm_master_dpi_bfm_10.altera_avalon_mm_master_bfm(fast__1)
+# Loading mm_slave_ks_kernel_mem0.mm_slave_ks_kernel_mem0(fast)
+# Loading aoc_sim_mm_slave_dpi_bfm_10.aoc_sim_mm_slave_dpi_bfm(fast)
+# Loading aoc_sim_mm_slave_dpi_bfm_10.altera_avalon_mm_slave_bfm(fast)
+# Loading kernel_system.kernel_system(fast)
+# Loading kernel_system_acl_internal_snoop.kernel_system_acl_internal_snoop(fast)
+# Loading altera_avalon_st_adapter_1920.kernel_system_acl_internal_snoop_altera_avalon_st_adapter_1920_yrxz5sa(fast)
+# Loading channel_adapter_1921.kernel_system_acl_internal_snoop_channel_adapter_1921_usoynca(fast)
+# Loading kernel_system_clk_1x.kernel_system_clk_1x(fast)
+# Loading kernel_system_clk_2x.kernel_system_clk_2x(fast)
+# Loading kernel_system_clk_snoop.kernel_system_clk_snoop(fast)
+# Loading kernel_system_hello_world_sys.kernel_system_hello_world_sys(fast)
+# Loading hello_world_sys_140.hello_world_sys(fast)
+# Loading hello_world_sys_140.hello_world_std_ic_partition_wrapper(fast)
+# Loading hello_world_sys_140.acl_work_group_dispatcher(fast)
+# Loading hello_world_sys_140.acl_reset_handler(fast)
+# Loading hello_world_sys_140.acl_kernel_finish_detector(fast)
+# Loading hello_world_sys_140.acl_reset_handler(fast__1)
+# Loading hello_world_sys_140.acl_multistage_accumulator(fast)
+# Loading hello_world_sys_140.acl_multistage_accumulator(fast__1)
+# Loading hello_world_sys_140.hello_world_function_cra_slave(fast)
+# Loading hello_world_sys_140.acl_id_iterator(fast)
+# Loading hello_world_sys_140.acl_shift_register(fast)
+# Loading hello_world_sys_140.acl_shift_register(fast__1)
+# Loading hello_world_sys_140.acl_fifo(fast)
+# Loading hello_world_sys_140.hld_fifo(fast)
+# Loading hello_world_sys_140.acl_mid_speed_fifo(fast)
+# Loading hello_world_sys_140.acl_reset_handler(fast__3)
+# Loading altera_mf_ver.altdpram(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# Loading hello_world_sys_140.acl_lfsr(fast)
+# Loading hello_world_sys_140.fibonacci_lfsr(fast)
+# Loading hello_world_sys_140.acl_reset_handler(fast__4)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast)
+# Loading hello_world_sys_140.acl_reset_handler(fast__5)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__1)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__2)
+# Loading hello_world_sys_140.acl_reset_handler(fast__2)
+# Loading hello_world_sys_140.acl_work_item_iterator(fast)
+# Loading hello_world_sys_140.acl_shift_register(fast__2)
+# Loading hello_world_sys_140.acl_shift_register(fast__3)
+# Loading hello_world_sys_140.acl_multistage_adder(fast)
+# Loading hello_world_sys_140.hello_world_top_wrapper_0(fast)
+# Loading hello_world_sys_140.hello_world_function_wrapper(fast)
+# Loading hello_world_sys_140.hello_world_function(fast)
+# Loading hello_world_sys_140.hello_world_bb_B0(fast)
+# Loading hello_world_sys_140.hello_world_B0_branch(fast)
+# Loading hello_world_sys_140.hello_world_B0_merge(fast)
+# Loading hello_world_sys_140.hello_world_bb_B0_stall_region(fast)
+# Loading hello_world_sys_140.hello_world_i_llvm_fpga_mem_unnamed_0_hello_world0(fast)
+# Loading hello_world_sys_140.lsu_top(fast)
+# Loading hello_world_sys_140.lsu_bursting_write(fast)
+# Loading hello_world_sys_140.lsu_bursting_write_internal(fast)
+# Loading hello_world_sys_140.bursting_coalescer(fast)
+# Loading hello_world_sys_140.acl_data_fifo(fast__2)
+# Loading hello_world_sys_140.acl_fifo(fast__1)
+# Loading hello_world_sys_140.hld_fifo(fast__1)
+# Loading hello_world_sys_140.acl_mid_speed_fifo(fast__1)
+# Loading altera_mf_ver.altdpram(fast__1)
+# Loading hello_world_sys_140.acl_lfsr(fast__1)
+# Loading hello_world_sys_140.fibonacci_lfsr(fast__1)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__3)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__4)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__5)
+# Loading hello_world_sys_140.acl_data_fifo(fast__1)
+# Loading hello_world_sys_140.acl_data_fifo(fast)
+# Loading hello_world_sys_140.acl_staging_reg(fast)
+# Loading hello_world_sys_140.acl_data_fifo(fast__5)
+# Loading hello_world_sys_140.acl_fifo(fast__2)
+# Loading hello_world_sys_140.hld_fifo(fast__2)
+# Loading hello_world_sys_140.acl_mid_speed_fifo(fast__2)
+# Loading altera_lnsim_ver.altera_syncram(fast)
+# Loading altera_lnsim_ver.ALTERA_LNSIM_MEMORY_INITIALIZATION(fast)
+# Loading hello_world_sys_140.acl_lfsr(fast__2)
+# Loading hello_world_sys_140.fibonacci_lfsr(fast__2)
+# Loading hello_world_sys_140.acl_lfsr(fast__3)
+# Loading hello_world_sys_140.fibonacci_lfsr(fast__3)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__6)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__7)
+# Loading hello_world_sys_140.acl_tessellated_incr_decr_threshold(fast__8)
+# Loading hello_world_sys_140.acl_data_fifo(fast__4)
+# Loading hello_world_sys_140.acl_data_fifo(fast__3)
+# Loading hello_world_sys_140.acl_staging_reg(fast__1)
+# Loading hello_world_sys_140.acl_data_fifo(fast__8)
+# Loading hello_world_sys_140.acl_fifo(fast__3)
+# Loading hello_world_sys_140.hld_fifo(fast__3)
+# Loading hello_world_sys_140.acl_mid_speed_fifo(fast__3)
+# Loading altera_mf_ver.altdpram(fast__2)
+# Loading hello_world_sys_140.acl_data_fifo(fast__7)
+# Loading hello_world_sys_140.acl_data_fifo(fast__6)
+# Loading hello_world_sys_140.acl_staging_reg(fast__2)
+# Loading hello_world_sys_140.lsu_permute_address(fast)
+# Loading hello_world_sys_140.acl_reset_handler(fast__6)
+# Loading hello_world_sys_140.acl_data_fifo(fast__11)
+# Loading hello_world_sys_140.acl_data_fifo(fast__10)
+# Loading hello_world_sys_140.acl_data_fifo(fast__9)
+# Loading hello_world_sys_140.acl_ll_fifo(fast)
+# Loading hello_world_sys_140.acl_staging_reg(fast__3)
+# Loading hello_world_sys_140.acl_valid_fifo_counter(fast)
+# Loading hello_world_sys_140.hello_world_i_llvm_fpga_sync_buffer_i32_0000ssage_sync_buffer1_0(fast)
+# Loading hello_world_sys_140.acl_dspba_buffer(fast)
+# Loading hello_world_sys_140.hello_world_B0_merge_reg(fast)
+# Loading hello_world_sys_140.hello_world_i_llvm_fpga_sync_buffer_i32_0000essage_sync_buffer_0(fast)
+# Loading hello_world_sys_140.hello_world_i_llvm_fpga_printf_p1024i8_printf_addr_0(fast)
+# Loading hello_world_sys_140.acl_printf_buffer_address_generator(fast)
+# Loading hello_world_sys_140.acl_clock2x_holder(fast)
+# Loading hello_world_sys_140.acl_start_signal_chain_element(fast)
+# Loading hello_world_sys_140.global_memory_tree0_mod(fast)
+# Loading hello_world_sys_140.acl_avm_to_ic(fast)
+# Loading hello_world_sys_140.hello_world_sys_ic_10753627231702743408(fast)
+# Loading hello_world_sys_140.acl_ic_master_intf(fast__1)
+# Loading hello_world_sys_140.acl_arb_intf(fast__1)
+# Loading hello_world_sys_140.acl_ic_wrp_intf(fast__1)
+# Loading hello_world_sys_140.acl_ic_rrp_intf(fast__1)
+# Loading hello_world_sys_140.acl_ic_master_endpoint(fast)
+# Loading hello_world_sys_140.acl_ic_slave_endpoint(fast)
+# Loading hello_world_sys_140.acl_ic_slave_wrp(fast)
+# Loading hello_world_sys_140.acl_ic_slave_rrp(fast)
+# Loading hello_world_sys_140.acl_ic_mem_router(fast)
+# Loading hello_world_sys_140.hello_world_sys_ic_11313567151972510142(fast)
+# Loading hello_world_sys_140.acl_ic_rrp_intf(fast__2)
+# Loading hello_world_sys_140.acl_ic_master_endpoint(fast__1)
+# Loading hello_world_sys_140.acl_ic_slave_endpoint(fast__1)
+# Loading hello_world_sys_140.acl_ic_slave_wrp(fast__1)
+# Loading hello_world_sys_140.acl_ic_slave_rrp(fast__1)
+# Loading hello_world_sys_140.acl_arb_intf(fast__2)
+# Loading hello_world_sys_140.acl_arb_pipeline_reg(fast)
+# Loading hello_world_sys_140.acl_arb_data(fast__1)
+# Loading hello_world_sys_140.acl_arb_pipeline_reg(fast__1)
+# Loading hello_world_sys_140.acl_arb_staging_reg(fast)
+# Loading hello_world_sys_140.acl_ic_to_avm(fast)
+# Loading hello_world_sys_140.acl_printf_counter(fast)
+# Loading hello_world_sys_140.acl_avm_to_ic(fast__1)
+# Loading hello_world_sys_140.hello_world_sys_ic_15863197869704828997(fast)
+# Loading hello_world_sys_140.acl_ic_master_intf(fast__2)
+# Loading hello_world_sys_140.acl_arb_intf(fast__3)
+# Loading hello_world_sys_140.acl_ic_wrp_intf(fast__2)
+# Loading hello_world_sys_140.acl_ic_rrp_intf(fast__3)
+# Loading hello_world_sys_140.acl_ic_master_endpoint(fast__2)
+# Loading hello_world_sys_140.acl_ic_slave_endpoint(fast__2)
+# Loading hello_world_sys_140.acl_ic_slave_wrp(fast__2)
+# Loading hello_world_sys_140.acl_ic_slave_rrp(fast__2)
+# Loading hello_world_sys_140.cra_ring_wrapper(fast)
+# Loading hello_world_sys_140.cra_ring_root(fast)
+# Loading hello_world_sys_140.cra_ring_rom(fast)
+# Loading hello_world_sys_140.cra_ring_node(fast)
+# Loading hello_world_sys_140.acl_rom_module(fast)
+# Loading hello_world_sys_140.acl_ecc_pkg(fast)
+# Loading hello_world_sys_140.acl_altera_syncram_wrapped(fast)
+# Loading altera_lnsim_ver.altera_syncram(fast__1)
+# Loading kernel_system_kernel_cra.kernel_system_kernel_cra(fast)
+# Loading altera_avalon_mm_bridge_2001.kernel_system_kernel_cra_altera_avalon_mm_bridge_2001_k2bg7dq(fast)
+# Loading kernel_system_kernel_irq.kernel_system_kernel_irq(fast)
+# Loading altera_irq_bridge_1920.kernel_system_kernel_irq_altera_irq_bridge_1920_sqfym3y(fast)
+# Loading kernel_system_reset.kernel_system_reset(fast)
+# Loading altera_mm_interconnect_1920.kernel_system_altera_mm_interconnect_1920_dj65czi(fast)
+# Loading altera_merlin_master_translator_191.kernel_system_altera_merlin_master_translator_191_g7h47bq(fast)
+# Loading altera_merlin_slave_translator_191.kernel_system_altera_merlin_slave_translator_191_x56fcki(fast)
+# Loading altera_irq_mapper_1920.kernel_system_altera_irq_mapper_1920_oganwhi(fast)
+# Loading altera_reset_controller_1921.altera_reset_controller(fast__1)
+# Loading altera_mm_interconnect_1920.mpsim_altera_mm_interconnect_1920_xfcajxa(fast)
+# Loading altera_merlin_master_translator_191.mpsim_altera_merlin_master_translator_191_g7h47bq(fast)
+# Loading altera_merlin_slave_translator_191.mpsim_altera_merlin_slave_translator_191_x56fcki(fast)
+# Loading altera_irq_mapper_1920.mpsim_altera_irq_mapper_1920_oganwhi(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (64) for port 'slave_readdata'. The port definition is at: ../../ip/mpsim/mpsim_ki/sw_reset_100/sim/sw_reset.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /mpsim/ki/ki/sw_reset File: ../../ip/mpsim/mpsim_ki/kernel_interface_151/sim/mpsim_ki_kernel_interface_151_3vpvdiy.v Line: 181
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'slave_readdata'. The port definition is at: ../../ip/mpsim/mpsim_ki/mem_org_mode_100/sim/mem_org_mode.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /mpsim/ki/ki/mem_org_mode0 File: ../../ip/mpsim/mpsim_ki/kernel_interface_151/sim/mpsim_ki_kernel_interface_151_3vpvdiy.v Line: 239
+# Compiling /tmp/joerock@localhost.localdomain_dpi_9587/linux_x86_64_gcc-7.4.0/exportwrapper.c
+# Loading /tmp/joerock@localhost.localdomain_dpi_9587/linux_x86_64_gcc-7.4.0/vsim_auto_compile.so
+# Loading /home/joerock/intelFPGA_pro/21.1/hld/host/linux64/lib/libaoc_cosim_msim.so
+# /home/joerock/intelFPGA_pro/21.1/hld/examples_aoc/hello_world/bin/vsim.wlf
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: - Hello from altera_avalon_mm_master_bfm
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   $Revision: #1 $
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   $Date: 2021/01/28 $
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   AV_ADDRESS_W             = 14
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   AV_SYMBOL_W              = 8
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   AV_NUMSYMBOLS            = 4
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   AV_BURSTCOUNT_W          = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   REGISTER_WAITREQUEST     = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   AV_FIX_READ_LATENCY      = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   AV_MAX_PENDING_READS     = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   AV_MAX_PENDING_WRITES    = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_READ                 = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_WRITE                = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_ADDRESS              = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_BYTE_ENABLE          = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_BURSTCOUNT           = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_READ_DATA            = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_READ_DATA_VALID      = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_WRITE_DATA           = 1
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_BEGIN_TRANSFER       = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_BEGIN_BURST_TRANSFER = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_WAIT_REQUEST         = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_LOCK                 = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_DEBUGACCESS          = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_TRANSACTIONID        = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_WRITERESPONSE        = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_READRESPONSE         = 0
+#                    0: INFO: mpsim.osi.osi.ki_bfm.__hello: -   USE_CLKEN                = 0
+#                    0: INFO: ------------------------------------------------------------
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: - Hello from altera_avalon_mm_master_bfm
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   $Revision: #1 $
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   $Date: 2021/01/28 $
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   AV_ADDRESS_W             = 31
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   AV_SYMBOL_W              = 8
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   AV_NUMSYMBOLS            = 4
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   AV_BURSTCOUNT_W          = 5
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   REGISTER_WAITREQUEST     = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   AV_FIX_READ_LATENCY      = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   AV_MAX_PENDING_READS     = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   AV_MAX_PENDING_WRITES    = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_READ                 = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_WRITE                = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_ADDRESS              = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_BYTE_ENABLE          = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_BURSTCOUNT           = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_READ_DATA            = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_READ_DATA_VALID      = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_WRITE_DATA           = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_BEGIN_TRANSFER       = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_BEGIN_BURST_TRANSFER = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_WAIT_REQUEST         = 1
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_LOCK                 = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_DEBUGACCESS          = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_TRANSACTIONID        = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_WRITERESPONSE        = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_READRESPONSE         = 0
+#                    0: INFO: mpsim.osi.osi.mbd_bfm.__hello: -   USE_CLKEN                = 0
+#                    0: INFO: ------------------------------------------------------------
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: - Hello from altera_avalon_mm_slave_bfm
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   $Revision: #1 $
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   $Date: 2021/01/28 $
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_ADDRESS_W             = 31
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_SYMBOL_W              = 8
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_NUMSYMBOLS            = 64
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_BURSTCOUNT_W          = 5
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   REGISTER_WAITREQUEST     = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_FIX_READ_LATENCY      = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_MAX_PENDING_READS     = 256
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_MAX_PENDING_WRITES    = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_READ_WAIT_TIME        = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   AV_WRITE_WAIT_TIME       = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_READ                 = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_WRITE                = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_ADDRESS              = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_BYTE_ENABLE          = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_BURSTCOUNT           = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_READ_DATA            = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_READ_DATA_VALID      = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_WRITE_DATA           = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_BEGIN_TRANSFER       = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_BEGIN_BURST_TRANSFER = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_WAIT_REQUEST         = 1
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_LOCK                 = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_DEBUGACCESS          = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_TRANSACTIONID        = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_WRITERESPONSE        = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_READRESPONSE         = 0
+#                    0: INFO: mpsim.osm_0_inst.mm_slave_ks_kernel_mem0.bfm.__hello: -   USE_CLKEN                = 0
+#                    0: INFO: ------------------------------------------------------------
+# Initializing memory contents for mpsim.ks.hello_world_sys.hello_world_sys.cra_ring_wrapper_inst.sys_description_rom.altera_syncram_wrapped_component.genblk5.genblk1.genblk1.genblk1.altera_syncram_inst.initialize_mem_contents with                                                                                                                                                                                                                                              sys_description.ver
+# ** Note: $finish    : ../../ip/mpsim/mpsim_osi/aoc_sim_mm_master_dpi_bfm_10/sim/aoc_sim_mm_master_dpi_bfm.sv(598)
+#    Time: 31373250 ps  Iteration: 2  Instance: /mpsim/osi/osi
+# Break in Task read_commands at ../../ip/mpsim/mpsim_osi/aoc_sim_mm_master_dpi_bfm_10/sim/aoc_sim_mm_master_dpi_bfm.sv line 598
+# 0

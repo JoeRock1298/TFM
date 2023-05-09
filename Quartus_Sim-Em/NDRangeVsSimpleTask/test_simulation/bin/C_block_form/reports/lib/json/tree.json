@@ -1,0 +1,55 @@
+{
+  "nodes":
+  [
+    {
+      "name":"mmul"
+      , "id":1528399224
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"mmul.B2"
+          , "id":1528458112
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":1536353824
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B0"
+          , "id":1528466352
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":1531725168
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B1"
+          , "id":1528458032
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":1532697616
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

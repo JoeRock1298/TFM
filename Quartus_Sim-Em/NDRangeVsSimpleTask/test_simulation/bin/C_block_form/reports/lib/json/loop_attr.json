@@ -1,0 +1,90 @@
+{
+  "name":"loop_attributes"
+  , "id":4294967295
+  , "nodes":
+  [
+    {
+      "name":"mmul"
+      , "id":1528800480
+      , "clk":"No"
+      , "fmax":"240.00"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+            , "line":57
+          }
+        ]
+      ]
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"mmul.B0"
+          , "id":1528466352
+          , "af":"240.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"9.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+        , {
+          "name":"mmul.B1"
+          , "id":1528458032
+          , "af":"240.00"
+          , "br":"1"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"n/a"
+          , "ll":"1"
+          , "lt":"528.000000"
+          , "mi":"n/a"
+          , "pl":"No"
+          , "tc":"0"
+          , "tn":"1"
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Hyper-Optimized loop structure: n/a"
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":87
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"mmul.B2"
+          , "id":1528458112
+          , "af":"240.00"
+          , "br":"0"
+          , "ci":"0"
+          , "fo":"Disabled"
+          , "ii":"1"
+          , "ll":"1"
+          , "lt":"10.000000"
+          , "mi":"n/a"
+          , "pl":"Yes"
+          , "tc":"0"
+          , "tn":"1"
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+}

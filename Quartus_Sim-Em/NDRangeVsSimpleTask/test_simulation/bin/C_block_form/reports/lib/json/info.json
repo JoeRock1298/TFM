@@ -1,0 +1,1 @@
+{"compileInfo":{"nodes":[{"command":"aoc -march=simulator -v -ghdl C_block_form.cl -o bin/C_block_form.aocx -board=a10gx","family":"Arria 10, 10AX115S2F45I1SG, a10_ref:a10gx","id":1,"name":"C_block_form","product":"OPENCL","quartus":"21.1.0 Build 169 Pro","time":"Sat May  6 18:14:25 2023","version":"21.1.0 Build 173.3"}]}}

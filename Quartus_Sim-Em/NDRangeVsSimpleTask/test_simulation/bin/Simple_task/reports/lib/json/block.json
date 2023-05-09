@@ -1,11 +1,11 @@
 {
-  "1703787488":
+  "937204704":
   {
     "nodes":
     [
       {
         "name":"Feedback"
-        , "id":1712027472
+        , "id":941493184
         , "start":"0.00"
         , "end":"1.00"
         , "subtype":"push"
@@ -37,13 +37,13 @@
     [
     ]
   }
-  , "1703787568":
+  , "937204784":
   {
     "nodes":
     [
       {
         "name":"Cluster 1"
-        , "id":1707587872
+        , "id":941005088
         , "start":"1.00"
         , "end":"5.00"
         , "details":
@@ -61,7 +61,7 @@
         [
           {
             "name":"Logic"
-            , "id":1707594608
+            , "id":941011824
             , "subtype":"entry"
             , "details":
             [
@@ -75,7 +75,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1707872976
+            , "id":941290192
             , "subtype":"exit"
             , "details":
             [
@@ -93,24 +93,16 @@
         ]
       }
       , {
-        "name":"Loop Orch"
-        , "id":1710624608
+        "name":"Loop Input"
+        , "id":951607840
         , "subtype":"default"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"Loop Orchestration Logic"
+            , "Instruction":"Loop Input"
+            , "Preceding Blocks":"mmul.B5, mmul.B1"
           }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
-              , "line":12
-            }
-          ]
         ]
         , "type":"inst"
       }
@@ -118,34 +110,12 @@
     , "links":
     [
       {
-        "from":1707594608
-        , "to":1707872976
+        "from":941011824
+        , "to":941290192
       }
       , {
-        "from":1710624608
-        , "to":1707594608
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1710624608
-        , "to":1707594608
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1710624608
-        , "to":1707594608
+        "from":951607840
+        , "to":941011824
         , "details":
         [
           {
@@ -154,15 +124,37 @@
           }
         ]
       }
+      , {
+        "from":951607840
+        , "to":941011824
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
+      , {
+        "from":951607840
+        , "to":941011824
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"1"
+          }
+        ]
+      }
     ]
   }
-  , "1703787648":
+  , "937204864":
   {
     "nodes":
     [
       {
         "name":"Input"
-        , "id":1718280944
+        , "id":945441392
         , "subtype":"default"
         , "details":
         [
@@ -179,13 +171,13 @@
     [
     ]
   }
-  , "1703787728":
+  , "937204944":
   {
     "nodes":
     [
       {
         "name":"Input"
-        , "id":1707342080
+        , "id":942636912
         , "subtype":"default"
         , "details":
         [
@@ -198,8 +190,8 @@
         , "type":"inst"
       }
       , {
-        "name":"Ptr. Comp."
-        , "id":1708403008
+        "name":"C"
+        , "id":943429392
         , "start":"1.00"
         , "end":"1.00"
         , "subtype":"default"
@@ -207,25 +199,16 @@
         [
           {
             "type":"table"
-            , "Instruction":"Pointer Computation"
+            , "Instruction":"Input Synchronization for 'C'"
             , "Start Cycle":"1"
             , "Latency":"0"
           }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
-              , "line":19
-            }
-          ]
         ]
         , "type":"inst"
       }
       , {
         "name":"+"
-        , "id":1710495984
+        , "id":944373232
         , "start":"0.00"
         , "end":"0.00"
         , "subtype":"default"
@@ -250,8 +233,34 @@
         , "type":"inst"
       }
       , {
+        "name":"Ptr. Comp."
+        , "id":952568400
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Pointer Computation"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":19
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
         "name":"ST"
-        , "id":1718559552
+        , "id":952569984
         , "start":"1.00"
         , "end":"3.00"
         , "subtype":"load/store"
@@ -279,40 +288,12 @@
         ]
         , "type":"inst"
       }
-      , {
-        "name":"C"
-        , "id":1718969376
-        , "start":"1.00"
-        , "end":"1.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Input Synchronization for 'C'"
-            , "Start Cycle":"1"
-            , "Latency":"0"
-          }
-        ]
-        , "type":"inst"
-      }
     ]
     , "links":
     [
       {
-        "from":1707342080
-        , "to":1710495984
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"32"
-          }
-        ]
-      }
-      , {
-        "from":1708403008
-        , "to":1718559552
+        "from":943429392
+        , "to":952568400
         , "details":
         [
           {
@@ -322,8 +303,8 @@
         ]
       }
       , {
-        "from":1710495984
-        , "to":1708403008
+        "from":944373232
+        , "to":952568400
         , "details":
         [
           {
@@ -333,8 +314,8 @@
         ]
       }
       , {
-        "from":1707342080
-        , "to":1710495984
+        "from":942636912
+        , "to":944373232
         , "details":
         [
           {
@@ -344,30 +325,8 @@
         ]
       }
       , {
-        "from":1707342080
-        , "to":1718559552
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"32"
-          }
-        ]
-      }
-      , {
-        "from":1718969376
-        , "to":1708403008
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"64"
-          }
-        ]
-      }
-      , {
-        "from":1707342080
-        , "to":1718559552
+        "from":942636912
+        , "to":952569984
         , "details":
         [
           {
@@ -376,66 +335,48 @@
           }
         ]
       }
-    ]
-  }
-  , "1703787808":
-  {
-    "nodes":
-    [
-      {
-        "name":"Cluster 2"
-        , "id":1708256336
-        , "start":"1.00"
-        , "end":"9.00"
+      , {
+        "from":942636912
+        , "to":944373232
         , "details":
         [
           {
             "type":"table"
-            , "Cluster Name":"i_sfc_s_c0_in_for_body8_mmuls_c0_enter5510_mmul1"
-            , "Cluster Type":"Stall-Free"
-            , "Cluster Start Cycle":"1"
-            , "Cluster Latency":"8"
-          }
-        ]
-        , "type":"cluster"
-        , "children":
-        [
-          {
-            "name":"Logic"
-            , "id":1708264352
-            , "subtype":"entry"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Cluster Logic Start Cycle":"1"
-                , "Cluster Logic Latency":"5"
-              }
-            ]
-            , "type":"inst"
-          }
-          , {
-            "name":"Exit"
-            , "id":1708863232
-            , "subtype":"exit"
-            , "details":
-            [
-              {
-                "type":"table"
-                , "Start Cycle":"6"
-                , "Latency":"3"
-                , "Exit FIFO Depth":"32"
-                , "Exit FIFO Width":"384"
-                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
-              }
-            ]
-            , "type":"inst"
+            , "Width":"32"
           }
         ]
       }
       , {
+        "from":942636912
+        , "to":952569984
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":952568400
+        , "to":952569984
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"64"
+          }
+        ]
+      }
+    ]
+  }
+  , "937205024":
+  {
+    "nodes":
+    [
+      {
         "name":"Cluster 3"
-        , "id":1709056544
+        , "id":942473760
         , "start":"169.00"
         , "end":"177.00"
         , "details":
@@ -453,7 +394,7 @@
         [
           {
             "name":"Logic"
-            , "id":1709063248
+            , "id":942480464
             , "subtype":"entry"
             , "details":
             [
@@ -467,7 +408,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1709091472
+            , "id":942508688
             , "subtype":"exit"
             , "details":
             [
@@ -485,8 +426,59 @@
         ]
       }
       , {
+        "name":"Cluster 2"
+        , "id":941673552
+        , "start":"1.00"
+        , "end":"9.00"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Cluster Name":"i_sfc_s_c0_in_for_body8_mmuls_c0_enter5510_mmul1"
+            , "Cluster Type":"Stall-Free"
+            , "Cluster Start Cycle":"1"
+            , "Cluster Latency":"8"
+          }
+        ]
+        , "type":"cluster"
+        , "children":
+        [
+          {
+            "name":"Logic"
+            , "id":941681568
+            , "subtype":"entry"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Logic Start Cycle":"1"
+                , "Cluster Logic Latency":"5"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Exit"
+            , "id":942280448
+            , "subtype":"exit"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Start Cycle":"6"
+                , "Latency":"3"
+                , "Exit FIFO Depth":"32"
+                , "Exit FIFO Width":"384"
+                , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+              }
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
         "name":"Loop Input"
-        , "id":1708444352
+        , "id":941949136
         , "subtype":"default"
         , "details":
         [
@@ -500,7 +492,7 @@
       }
       , {
         "name":"LD"
-        , "id":1718048768
+        , "id":951457376
         , "start":"9.00"
         , "end":"169.00"
         , "subtype":"load/store"
@@ -530,7 +522,7 @@
       }
       , {
         "name":"LD"
-        , "id":1723284768
+        , "id":951810928
         , "start":"9.00"
         , "end":"169.00"
         , "subtype":"load/store"
@@ -562,16 +554,16 @@
     , "links":
     [
       {
-        "from":1708264352
-        , "to":1708863232
+        "from":942480464
+        , "to":942508688
       }
       , {
-        "from":1709063248
-        , "to":1709091472
+        "from":941681568
+        , "to":942280448
       }
       , {
-        "from":1708444352
-        , "to":1708264352
+        "from":941949136
+        , "to":941681568
         , "details":
         [
           {
@@ -581,19 +573,8 @@
         ]
       }
       , {
-        "from":1708444352
-        , "to":1708264352
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"32"
-          }
-        ]
-      }
-      , {
-        "from":1708444352
-        , "to":1708264352
+        "from":941949136
+        , "to":941681568
         , "details":
         [
           {
@@ -603,8 +584,19 @@
         ]
       }
       , {
-        "from":1708444352
-        , "to":1708264352
+        "from":941949136
+        , "to":941681568
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":941949136
+        , "to":941681568
         , "details":
         [
           {
@@ -614,8 +606,8 @@
         ]
       }
       , {
-        "from":1708444352
-        , "to":1708264352
+        "from":941949136
+        , "to":941681568
         , "details":
         [
           {
@@ -625,8 +617,8 @@
         ]
       }
       , {
-        "from":1708444352
-        , "to":1708264352
+        "from":941949136
+        , "to":941681568
         , "details":
         [
           {
@@ -636,8 +628,8 @@
         ]
       }
       , {
-        "from":1708444352
-        , "to":1708264352
+        "from":941949136
+        , "to":941681568
         , "details":
         [
           {
@@ -647,8 +639,8 @@
         ]
       }
       , {
-        "from":1718048768
-        , "to":1709063248
+        "from":951457376
+        , "to":942480464
         , "details":
         [
           {
@@ -658,8 +650,8 @@
         ]
       }
       , {
-        "from":1708863232
-        , "to":1718048768
+        "from":942280448
+        , "to":951457376
         , "details":
         [
           {
@@ -669,8 +661,8 @@
         ]
       }
       , {
-        "from":1723284768
-        , "to":1709063248
+        "from":951810928
+        , "to":942480464
         , "details":
         [
           {
@@ -680,8 +672,8 @@
         ]
       }
       , {
-        "from":1708863232
-        , "to":1723284768
+        "from":942280448
+        , "to":951810928
         , "details":
         [
           {
@@ -692,65 +684,31 @@
       }
     ]
   }
-  , "1704268080":
+  , "937685296":
   {
     "nodes":
     [
       {
-        "name":"Compare"
-        , "id":1707659952
+        "name":"?"
+        , "id":941861568
         , "start":"1.00"
-        , "end":"1.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"32-bit Integer Compare"
-            , "Start Cycle":"1"
-            , "Latency":"0"
-          }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
-              , "line":10
-            }
-          ]
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"FFwd Src"
-        , "id":1707793824
-        , "start":"2.00"
         , "end":"2.00"
-        , "subtype":"ffwdSource"
+        , "subtype":"pop"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"FFwd Source"
-            , "Start Cycle":"2"
-            , "Latency":"0"
+            , "Instruction":"Feedback Read"
+            , "Variable":"Unknown variable"
+            , "Start Cycle":"1"
+            , "Latency":"1"
           }
-        ]
-        , "debug":
-        [
-          [
-            {
-              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
-              , "line":10
-            }
-          ]
         ]
         , "type":"inst"
       }
       , {
         "name":"+"
-        , "id":1708078432
+        , "id":943106080
         , "start":"2.00"
         , "end":"2.00"
         , "subtype":"default"
@@ -776,43 +734,8 @@
         , "type":"inst"
       }
       , {
-        "name":"N"
-        , "id":1710308448
-        , "start":"2.00"
-        , "end":"2.00"
-        , "subtype":"default"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Input Synchronization for 'N'"
-            , "Start Cycle":"2"
-            , "Latency":"0"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
-        "name":"?"
-        , "id":1711919136
-        , "start":"1.00"
-        , "end":"2.00"
-        , "subtype":"pop"
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Instruction":"Feedback Read"
-            , "Variable":"Unknown variable"
-            , "Start Cycle":"1"
-            , "Latency":"1"
-          }
-        ]
-        , "type":"inst"
-      }
-      , {
         "name":"FFwd Src"
-        , "id":1712021904
+        , "id":945272096
         , "start":"1.00"
         , "end":"1.00"
         , "subtype":"ffwdSource"
@@ -837,16 +760,33 @@
         , "type":"inst"
       }
       , {
-        "name":"Select"
-        , "id":1712023296
+        "name":"N"
+        , "id":945335840
         , "start":"2.00"
         , "end":"2.00"
-        , "subtype":"select"
+        , "subtype":"default"
         , "details":
         [
           {
             "type":"table"
-            , "Instruction":"32-bit Select"
+            , "Instruction":"Input Synchronization for 'N'"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"FFwd Src"
+        , "id":945438608
+        , "start":"2.00"
+        , "end":"2.00"
+        , "subtype":"ffwdSource"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"FFwd Source"
             , "Start Cycle":"2"
             , "Latency":"0"
           }
@@ -864,7 +804,7 @@
       }
       , {
         "name":"+"
-        , "id":1712024688
+        , "id":945445568
         , "start":"2.00"
         , "end":"2.00"
         , "subtype":"default"
@@ -891,7 +831,7 @@
       }
       , {
         "name":"N"
-        , "id":1712028864
+        , "id":945487232
         , "start":"1.00"
         , "end":"1.00"
         , "subtype":"default"
@@ -907,8 +847,51 @@
         , "type":"inst"
       }
       , {
+        "name":"N"
+        , "id":945515136
+        , "start":"1.00"
+        , "end":"1.00"
+        , "subtype":"default"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"Input Synchronization for 'N'"
+            , "Start Cycle":"1"
+            , "Latency":"0"
+          }
+        ]
+        , "type":"inst"
+      }
+      , {
+        "name":"Select"
+        , "id":945576032
+        , "start":"2.00"
+        , "end":"2.00"
+        , "subtype":"select"
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Instruction":"32-bit Select"
+            , "Start Cycle":"2"
+            , "Latency":"0"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
+        ]
+        , "type":"inst"
+      }
+      , {
         "name":"Compare"
-        , "id":1712070528
+        , "id":945675616
         , "start":"1.00"
         , "end":"2.00"
         , "subtype":"default"
@@ -933,8 +916,8 @@
         , "type":"inst"
       }
       , {
-        "name":"N"
-        , "id":1712245808
+        "name":"Compare"
+        , "id":945679584
         , "start":"1.00"
         , "end":"1.00"
         , "subtype":"default"
@@ -942,10 +925,19 @@
         [
           {
             "type":"table"
-            , "Instruction":"Input Synchronization for 'N'"
+            , "Instruction":"32-bit Integer Compare"
             , "Start Cycle":"1"
             , "Latency":"0"
           }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
+              , "line":10
+            }
+          ]
         ]
         , "type":"inst"
       }
@@ -953,19 +945,8 @@
     , "links":
     [
       {
-        "from":1707659952
-        , "to":1712021904
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"1"
-          }
-        ]
-      }
-      , {
-        "from":1708078432
-        , "to":1712024688
+        "from":943106080
+        , "to":945445568
         , "details":
         [
           {
@@ -975,8 +956,8 @@
         ]
       }
       , {
-        "from":1710308448
-        , "to":1712023296
+        "from":945335840
+        , "to":945576032
         , "details":
         [
           {
@@ -986,19 +967,8 @@
         ]
       }
       , {
-        "from":1712023296
-        , "to":1708078432
-        , "details":
-        [
-          {
-            "type":"table"
-            , "Width":"32"
-          }
-        ]
-      }
-      , {
-        "from":1712024688
-        , "to":1707793824
+        "from":945445568
+        , "to":945438608
         , "details":
         [
           {
@@ -1008,8 +978,8 @@
         ]
       }
       , {
-        "from":1712028864
-        , "to":1712070528
+        "from":945487232
+        , "to":945679584
         , "details":
         [
           {
@@ -1019,8 +989,30 @@
         ]
       }
       , {
-        "from":1712070528
-        , "to":1712023296
+        "from":945515136
+        , "to":945675616
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":945576032
+        , "to":943106080
+        , "details":
+        [
+          {
+            "type":"table"
+            , "Width":"32"
+          }
+        ]
+      }
+      , {
+        "from":945675616
+        , "to":945576032
         , "details":
         [
           {
@@ -1030,25 +1022,25 @@
         ]
       }
       , {
-        "from":1712245808
-        , "to":1707659952
+        "from":945679584
+        , "to":945272096
         , "details":
         [
           {
             "type":"table"
-            , "Width":"32"
+            , "Width":"1"
           }
         ]
       }
     ]
   }
-  , "1704306384":
+  , "937723600":
   {
     "nodes":
     [
       {
         "name":"Cluster 0"
-        , "id":1707194464
+        , "id":940611680
         , "start":"1.00"
         , "end":"8.00"
         , "details":
@@ -1066,7 +1058,7 @@
         [
           {
             "name":"Logic"
-            , "id":1707201312
+            , "id":940618528
             , "subtype":"entry"
             , "details":
             [
@@ -1080,7 +1072,7 @@
           }
           , {
             "name":"Exit"
-            , "id":1707413008
+            , "id":940830224
             , "subtype":"exit"
             , "details":
             [
@@ -1099,7 +1091,7 @@
       }
       , {
         "name":"Loop Orch"
-        , "id":1718281904
+        , "id":945967024
         , "subtype":"default"
         , "details":
         [
@@ -1123,12 +1115,12 @@
     , "links":
     [
       {
-        "from":1707201312
-        , "to":1707413008
+        "from":940618528
+        , "to":940830224
       }
       , {
-        "from":1718281904
-        , "to":1707201312
+        "from":945967024
+        , "to":940618528
         , "details":
         [
           {

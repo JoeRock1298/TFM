@@ -1,0 +1,145 @@
+{
+  "1875639576":
+  {
+    "nodes":
+    [
+      {
+        "name":"hello_world.B0"
+        , "id":1875647616
+        , "start":"0"
+        , "end":"3"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"thread_id_from_which_to_print_message"
+            , "id":1880936944
+            , "start":"1"
+            , "end":"1"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Input Synchronization for 'thread_id_from_which_to_print_message'"
+                , "Start Cycle":"1"
+                , "Latency":"0"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Compare"
+            , "id":1880672832
+            , "start":"1"
+            , "end":"1"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"32-bit Integer Compare"
+                , "Start Cycle":"1"
+                , "Latency":"0"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device/hello_world.cl"
+                  , "line":27
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"thread_id_from_which_to_print_message"
+            , "id":1880928400
+            , "start":"1"
+            , "end":"1"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Input Synchronization for 'thread_id_from_which_to_print_message'"
+                , "Start Cycle":"1"
+                , "Latency":"0"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"id"
+            , "id":1877427952
+            , "start":"1"
+            , "end":"1"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Input Synchronization for 'id'"
+                , "Start Cycle":"1"
+                , "Latency":"0"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"ST"
+            , "id":1880202112
+            , "start":"1"
+            , "end":"3"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Store"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Start Cycle":"1"
+                , "Latency":"2"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/hello_world/device/hello_world.cl"
+                  , "line":29
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1877427952
+        , "to":1880202112
+      }
+      , {
+        "from":1880928400
+        , "to":1880202112
+      }
+      , {
+        "from":1880672832
+        , "to":1880202112
+      }
+      , {
+        "from":1880936944
+        , "to":1880672832
+      }
+    ]
+  }
+}

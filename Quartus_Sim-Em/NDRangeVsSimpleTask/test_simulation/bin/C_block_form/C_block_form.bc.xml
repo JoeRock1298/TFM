@@ -1,0 +1,1609 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<ENABLE_HYPER_OPTIMIZATIONS value="0" />
+	<USE_SYNC_RESET value="0" />
+	<TOP_LEVEL_RESET_EXTENDER value="0" />
+	<ENABLE_STALL_LATENCY value="0" />
+	<ENABLE_ECC value="0" />
+	<GLOBAL_WRITE_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_READ_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_LSU_IC_WIDE_DATA_SLICING value="0" />
+	<ALLOW_HIGH_SPEED_FIFO_USAGE value="0" />
+	<KERNEL_BUNDLE name="mmul" kname="mmul" compute_units="1">
+	<KERNEL name="mmul" kname="mmul" filename="kernel_hdl/mmul/mmul_function_wrapper.sv" version="1" cosim_name="" enable_global_profiling="1" workgroup_invariant="0" workitem_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<LOCAL_MEM aspace="3" begin="0" next="0" banks="0" width="0" static_demand="0" num_groups="1" has_atomics="0" ports="2" write_ports="2" rdw_mode="0" repl_fac="1" ic_req_latency="0" ic_rrp_latency="0" ic_wrp_latency="0" req_pipe_interval="0" ret_fanout="0" num_ports_per_phys_mem="2" phys_mem_latency="4" minimize_memory_usage="0" enable="0" lmem_type="AUTO" ram_mode="0" use_mif_file="0" use_2x_mem="0" num_words="0" address_width="0" num_words_per_bank="0" bank_address_width="0" use_byteena="0">
+			</LOCAL_MEM>
+			<LOCAL_MEM aspace="64" begin="0" next="49152" banks="1" width="1024" static_demand="16384" num_groups="1" has_atomics="0" ports="2" write_ports="2" rdw_mode="0" repl_fac="1" ic_req_latency="0" ic_rrp_latency="0" ic_wrp_latency="0" req_pipe_interval="0" ret_fanout="0" num_ports_per_phys_mem="2" phys_mem_latency="3" minimize_memory_usage="0" enable="0" lmem_type="AUTO" ram_mode="0" use_mif_file="0" use_2x_mem="0" num_words="384" address_width="9" num_words_per_bank="384" bank_address_width="9" use_byteena="1">
+				<BANK id="0">
+					<PORT id="0" register="0" />
+					<PORT id="1" register="0" />
+				</BANK>
+			</LOCAL_MEM>
+			<LOCAL_MEM aspace="65" begin="0" next="49152" banks="1" width="32" static_demand="16384" num_groups="1" has_atomics="0" ports="44" write_ports="44" rdw_mode="0" repl_fac="11" ic_req_latency="0" ic_rrp_latency="0" ic_wrp_latency="0" req_pipe_interval="0" ret_fanout="0" num_ports_per_phys_mem="4" phys_mem_latency="4" minimize_memory_usage="0" enable="0" lmem_type="AUTO" ram_mode="1" use_mif_file="0" use_2x_mem="1" num_words="12288" address_width="14" num_words_per_bank="12288" bank_address_width="14" use_byteena="0">
+				<BANK id="0">
+					<PORT id="0" register="0" />
+					<PORT id="1" register="0" />
+					<PORT id="2" register="0" />
+					<PORT id="3" register="0" />
+					<PORT id="4" register="0" />
+					<PORT id="5" register="0" />
+					<PORT id="6" register="0" />
+					<PORT id="7" register="0" />
+					<PORT id="8" register="0" />
+					<PORT id="9" register="0" />
+					<PORT id="10" register="0" />
+					<PORT id="11" register="0" />
+					<PORT id="12" register="0" />
+					<PORT id="13" register="0" />
+					<PORT id="14" register="0" />
+					<PORT id="15" register="0" />
+					<PORT id="16" register="0" />
+					<PORT id="17" register="0" />
+					<PORT id="18" register="0" />
+					<PORT id="19" register="0" />
+					<PORT id="20" register="0" />
+					<PORT id="21" register="0" />
+					<PORT id="22" register="0" />
+					<PORT id="23" register="0" />
+					<PORT id="24" register="0" />
+					<PORT id="25" register="0" />
+					<PORT id="26" register="0" />
+					<PORT id="27" register="0" />
+					<PORT id="28" register="0" />
+					<PORT id="29" register="0" />
+					<PORT id="30" register="0" />
+					<PORT id="31" register="0" />
+					<PORT id="32" register="0" />
+					<PORT id="33" register="0" />
+					<PORT id="34" register="0" />
+					<PORT id="35" register="0" />
+					<PORT id="36" register="0" />
+					<PORT id="37" register="0" />
+					<PORT id="38" register="0" />
+					<PORT id="39" register="0" />
+					<PORT id="40" register="0" />
+					<PORT id="41" register="0" />
+					<PORT id="42" register="0" />
+					<PORT id="43" register="0" />
+				</BANK>
+			</LOCAL_MEM>
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="32768" />
+			<MAX_WORK_GROUP_SIZE num="1" values="128" />
+			<REQUIRED_WORK_GROUP_SIZE x="0" y="0" z="0" />
+			<FAST_RELAUNCH_DEPTH value="1" />
+			<USES_GLOBAL_WORK_OFFSET value="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="slave" cosim_name="mmul_function_cra_slave" read="1" write="1" width="64" is_volatile="0" size="256" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/sv/base/dspba_library_ver.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_altera_syncram_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_scfifo_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_decoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_encoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mid_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_one_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_zero_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mlab_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_parameter_assert.svh" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_decr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_work_group_limiter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_work_group_limiter_dspba.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_master.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_global_load_store.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_burst_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_coalescer_dynamic_timeout.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_data_aligner.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_cache.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_unaligned_controller.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_word_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_kernel_downstream.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_barrier_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_loop_profiler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_sim_latency_tracker.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_limiter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer_dspba.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer_complex.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_embedded_workgroup_issuer_fifo.v" />
+			<FILE name="kernel_hdl/mmul/mmul_function_wrapper.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_function.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B0_stall_region.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_sfc_s_c0_in_entry_s_c0_enter_mmul1.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_entry_s_c0_exit_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_entry0000_mmul1_full_detector.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_entry0000exit_mmul1_data_fifo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_sfc_logic_s_c0_in_entry_s_c0_enter_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sync_buffer_i32_n_sync_buffer1_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sync_buffer_i32_n_sync_buffer2_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sync_buffer_i32_n_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B0_merge_reg.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B0_branch.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B0_merge.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B1.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B1_stall_region.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm76_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_readdata_reg_lm76_1.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_readdata_reg_lm_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_memdep_95_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_memdep_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_simple_barrier_unnamed_3_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_simple_barrier_unnamed_6_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sync_buffer_p1024f32_a_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sync_buffer_p1024f32_b_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_wg_limiter_enter_l_grpid_0_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_wg_limiter_enter_l_grpid_1_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_sfc_s_c0_in_for_body_s_c0_enter13281_mmul29.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_for_body_s_c0_exit139_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_for_b0000_mmul1_full_detector.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_for_b0000t139_mmul1_data_fifo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_sfc_logic_s_c0_in_for_body_s_c0_enter13281_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm1007_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm1048_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm1089_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm11210_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm11611_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm12012_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm12413_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm12814_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm13215_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm13616_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm14017_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm14418_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm14819_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm15220_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm15621_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm16022_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm16423_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm16824_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm17225_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm17626_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm18027_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm18428_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm18829_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm19230_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm19631_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm20032_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm20433_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm802_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm843_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm884_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm925_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_lm966_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_wg_limiter_exit_unnamed_4_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_wgl_exit_storage.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_wg_limiter_exit_unnamed_5_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_dupName_0_wgl_exit_storage_261i0676j68636g6u0qc0xgbuoz.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320000q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320001q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320002q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320003q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320004q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320005q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320006q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320007q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320008q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f320009q0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f32000aq0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f32000bq0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f32000cq0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f32000dq0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f32000eq0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_flt_i_llvm_fpga_dot_product_f32_f32000fq0cp0jv24cp06c00qfzo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_memcoalesce_load_fpgaunique_321_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B1_merge_reg.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_loop_capacity_FIFO.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B1_branch.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B1_merge.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_priority_encoder.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B2.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B2_stall_region.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_mem_unnamed_7_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_sfc_s_c0_in_for_end47_s_c0_enter144_mmul2.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_for_end47_s_c0_exit148_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_for_e0000_mmul1_full_detector.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sfc_exit_s_c0_out_for_e0000t148_mmul1_data_fifo.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_sfc_logic_s_c0_in_for_end47_s_c0_enter144_mmul0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sync_buffer_i32_n_sync_buffer3_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_i_llvm_fpga_sync_buffer_p1024f32_c_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B2_branch.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_B2_merge.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_loop_limiter_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B1_sr_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B1_sr_1.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_bb_B2_sr_0.sv" />
+			<FILE name="kernel_hdl/mmul/mmul_function_cra_slave.sv" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="memcoalesce_load_mmul_fpgaunique_321_mmul" cosim_name="" type="master" width="1024" true_lsu_width="1024" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="64" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="1" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="memdep_95_mmul" cosim_name="" type="master" width="1024" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="64" optype="write" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="0" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm1007_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="6" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm1048_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="7" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm1089_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="5" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm11210_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="38" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm11611_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="10" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm12012_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="11" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm12413_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="9" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm12814_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="39" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm13215_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="14" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm13616_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="15" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm14017_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="13" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm14418_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="42" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm14819_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="18" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm15220_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="19" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm15621_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="17" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm16022_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="43" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm16423_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="22" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm16824_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="23" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm17225_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="21" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm17626_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="25" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm18027_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="26" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm18428_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="27" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm18829_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="33" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm19230_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="29" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm19631_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="30" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm20032_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="31" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm20433_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="37" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm802_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="34" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm843_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="2" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm884_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="3" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm925_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="1" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm966_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="read" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="35" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="memdep_mmul" cosim_name="" type="master" width="32" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="65" optype="write" criticality="255" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="0" bank="0" />
+				<CONNECTION port="4" bank="0" />
+				<CONNECTION port="8" bank="0" />
+				<CONNECTION port="12" bank="0" />
+				<CONNECTION port="16" bank="0" />
+				<CONNECTION port="20" bank="0" />
+				<CONNECTION port="24" bank="0" />
+				<CONNECTION port="28" bank="0" />
+				<CONNECTION port="32" bank="0" />
+				<CONNECTION port="36" bank="0" />
+				<CONNECTION port="40" bank="0" />
+			</INTERFACE>
+			<INTERFACE port="lm76_mmul" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="255" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm_mmul" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="255" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="unnamed_mmul7_mmul" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="write" criticality="8" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="N" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" alignment="1" type_qualifier="C" access_qualifier="none" type_name="uint" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="A" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="RC" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="B" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="RC" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="C" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="R" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="Awrk" cosim_name="" opencl_access_type="ACL_ARG_ADDR_LOCAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="4" alignment="1024" type_qualifier="R" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" aspace="3" lmem_size_bytes="16384" >
+		</ARGUMENT>
+			<ARGUMENT name="Bwrk" cosim_name="" opencl_access_type="ACL_ARG_ADDR_LOCAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="4" alignment="1024" type_qualifier="R" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" aspace="3" lmem_size_bytes="16384" >
+		</ARGUMENT>
+		</KERNEL_ARGS>
+		<IPS>
+			<IP aspace="64" name="acl_avm_to_ic" num_instances="2">
+				<PARAM type="int" name="ADDRESS_W" value="32"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="WRITEDATA_W" value="1024"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_local_mem_router" num_instances="2">
+				<PARAM type="int" name="ADDRESS_W" value="9"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="NUM_BANKS" value="1"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="9"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="9"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="3"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="3"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="64" name="acl_mem1x" num_instances="1">
+				<PARAM type="int" name="ASYNC_RESET" value="1"/>
+				<PARAM type="int" name="DEPTH_WORDS" value="384"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="3"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_BLOCK_TYPE" value="AUTO"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="SYNCHRONIZE_RESET" value="0"/>
+				<PARAM type="int" name="USE_BYTEENA" value="1"/>
+				<PARAM type="int" name="WIDTH" value="1024"/>
+			</IP>
+			<IP aspace="65" name="acl_avm_to_ic" num_instances="33">
+				<PARAM type="int" name="ADDRESS_W" value="32"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="WRITEDATA_W" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_local_mem_router" num_instances="33">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="NUM_BANKS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="14"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="4"/>
+				<PARAM type="int" name="DATA_W" value="32"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+			<IP aspace="65" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="12288"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="BIDIR_DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="0"/>
+				<PARAM type="int" name="WIDTH" value="32"/>
+			</IP>
+		</IPS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<GLOBAL_MEM_LATENCY kernel_side_mem_latency="8" arbitration_latency="5" />
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+	<KERNEL_INTERCONNECT>
+		<USM_INTERCONNECT value="0" />
+		<GLOBAL_ATOMICS value="0" />
+		<GLOBAL_INTERCONNECT gmem_id="0" name="DDR" type="0" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_WRITES memory="DDR" aspace="1024" />
+	</KERNEL_INTERCONNECT>
+</KERNEL_LIST>

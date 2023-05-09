@@ -1,0 +1,106 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Speculated iterations", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: mmul"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+            , "line":50
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"ND-Range"
+        }
+        , {
+          "type":"text"
+          , "text":"ND-Range"
+        }
+        , {
+          "type":"text"
+          , "text":"Fmax bottlenck block: None"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/ipp1476408832230.html"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"mmul.B1"
+          , "data":
+          ["No", "n/a", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/C_block_form.cl"
+                , "line":87
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"Thread capacity = 640"
+            }
+            , {
+              "type":"text"
+              , "text":"Thread capacity = 640"
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"Fully unrolled loop"
+              , "data":
+              ["n/a", "n/a", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"C_block_form.cl"
+                    , "line":101
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
