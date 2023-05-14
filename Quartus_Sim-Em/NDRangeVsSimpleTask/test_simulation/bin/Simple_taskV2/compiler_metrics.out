@@ -1,0 +1,3 @@
+mmul,target_fmax,240
+mmul,mmul.B2,II,1
+mmul,mmul.B4,II,1

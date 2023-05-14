@@ -1,0 +1,1909 @@
+{
+  "1896944360":
+  {
+    "nodes":
+    [
+      {
+        "name":"mmul.B0"
+        , "id":1896960032
+        , "start":"0"
+        , "end":"10"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"?"
+            , "id":1910038768
+            , "start":"9"
+            , "end":"10"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Feedback Read"
+                , "Variable":"Unknown variable"
+                , "Start Cycle":"9"
+                , "Latency":"1"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Cluster 0"
+            , "id":1899968912
+            , "start":"1"
+            , "end":"10"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_entry_mmuls_c0_enter_mmul1"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"1"
+                , "Cluster Latency":"9"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"N"
+                , "id":1900819120
+                , "start":"0"
+                , "end":"2"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'N'"
+                    , "Start Cycle":"0"
+                    , "Latency":"2"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"*"
+                , "id":1905523472
+                , "start":"2"
+                , "end":"5"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Multiply"
+                    , "Start Cycle":"2"
+                    , "Latency":"3"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Compare"
+                , "id":1905523824
+                , "start":"6"
+                , "end":"6"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Compare"
+                    , "Start Cycle":"6"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Select"
+                , "id":1905524176
+                , "start":"6"
+                , "end":"6"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Select"
+                    , "Start Cycle":"6"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1905524528
+                , "start":"6"
+                , "end":"6"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Add"
+                    , "Constant Operand":"-1 (0xFFFFFFFF)"
+                    , "Start Cycle":"6"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1913356432
+                , "start":"7"
+                , "end":"7"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"33-bit Integer Add"
+                    , "Constant Operand":"-1 (0x1FFFFFFFF)"
+                    , "Start Cycle":"7"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":1910756320
+                , "start":"7"
+                , "end":"7"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Start Cycle":"7"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"N"
+                , "id":1901056816
+                , "start":"0"
+                , "end":"3"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'N'"
+                    , "Start Cycle":"0"
+                    , "Latency":"3"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"N"
+                , "id":1909897808
+                , "start":"0"
+                , "end":"3"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'N'"
+                    , "Start Cycle":"0"
+                    , "Latency":"3"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"*"
+                , "id":1909898880
+                , "start":"3"
+                , "end":"6"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Multiply"
+                    , "Start Cycle":"3"
+                    , "Latency":"3"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Compare"
+                , "id":1910802048
+                , "start":"6"
+                , "end":"6"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Compare"
+                    , "Start Cycle":"6"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Xor"
+                , "id":1915724208
+                , "start":"6"
+                , "end":"6"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"1-bit Xor"
+                    , "Constant Operand":"1 (0x1)"
+                    , "Start Cycle":"6"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":19
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":1911643312
+                , "start":"6"
+                , "end":"6"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Start Cycle":"6"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":19
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"N"
+                , "id":1910802400
+                , "start":"0"
+                , "end":"7"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'N'"
+                    , "Start Cycle":"0"
+                    , "Latency":"7"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Compare"
+                , "id":1915723504
+                , "start":"7"
+                , "end":"7"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Compare"
+                    , "Start Cycle":"7"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"And"
+                , "id":1915723856
+                , "start":"7"
+                , "end":"7"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"1-bit And"
+                    , "Start Cycle":"7"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":1913356784
+                , "start":"7"
+                , "end":"7"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Start Cycle":"7"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"N"
+                , "id":1915724560
+                , "start":"0"
+                , "end":"2"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'N'"
+                    , "Start Cycle":"0"
+                    , "Latency":"2"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Compare"
+                , "id":1915944960
+                , "start":"2"
+                , "end":"3"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Compare"
+                    , "Start Cycle":"2"
+                    , "Latency":"1"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Select"
+                , "id":1905348832
+                , "start":"3"
+                , "end":"3"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Select"
+                    , "Start Cycle":"3"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1900818064
+                , "start":"3"
+                , "end":"3"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Add"
+                    , "Constant Operand":"-1 (0xFFFFFFFF)"
+                    , "Start Cycle":"3"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1900818768
+                , "start":"3"
+                , "end":"3"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"33-bit Integer Add"
+                    , "Constant Operand":"-1 (0x1FFFFFFFF)"
+                    , "Start Cycle":"3"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Src"
+                , "id":1911523584
+                , "start":"3"
+                , "end":"3"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Source"
+                    , "Start Cycle":"3"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":1901941152
+                , "start":"7"
+                , "end":"10"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Start Cycle":"7"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"32"
+                    , "Exit FIFO Width":"8"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+        ]
+      }
+      , {
+        "name":"mmul.B2"
+        , "id":1896499056
+        , "start":"10"
+        , "end":"15"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Cluster 1"
+            , "id":1900281568
+            , "start":"11"
+            , "end":"15"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body_mmuls_c0_enter224_mmul1"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"1"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"Global variable"
+                , "id":1905327456
+                , "start":"12"
+                , "end":"12"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"Global variable"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1911645232
+                , "start":"12"
+                , "end":"12"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Add"
+                    , "Constant Operand":"1 (0x1)"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"N"
+                , "id":1905470640
+                , "start":"10"
+                , "end":"12"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'N'"
+                    , "Start Cycle":"0"
+                    , "Latency":"2"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":1909580176
+                , "start":"11"
+                , "end":"11"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Start Cycle":"1"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Select"
+                , "id":1905470288
+                , "start":"11"
+                , "end":"11"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"33-bit Select"
+                    , "Start Cycle":"1"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":1905528496
+                , "start":"12"
+                , "end":"15"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Start Cycle":"2"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"32"
+                    , "Exit FIFO Width":"128"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+        ]
+      }
+      , {
+        "name":"mmul.B4"
+        , "id":1896499216
+        , "start":"15"
+        , "end":"239"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Cluster 2"
+            , "id":1900793344
+            , "start":"16"
+            , "end":"71"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body4_mmuls_c0_enter255_mmul1"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"1"
+                , "Cluster Latency":"55"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"Global variable"
+                , "id":1911410832
+                , "start":"17"
+                , "end":"17"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"Global variable"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"32-bit Signed Integer Remainder"
+                , "id":1910555088
+                , "start":"17"
+                , "end":"17"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Signed Integer Remainder"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":11
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Global variable"
+                , "id":1910299280
+                , "start":"17"
+                , "end":"17"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"Global variable"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"-"
+                , "id":1900438544
+                , "start":"67"
+                , "end":"67"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Subtract"
+                    , "Start Cycle":"52"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Global variable"
+                , "id":1910184560
+                , "start":"64"
+                , "end":"64"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Feedback Read"
+                    , "Variable":"Global variable"
+                    , "Start Cycle":"49"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1909779584
+                , "start":"65"
+                , "end":"65"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Add"
+                    , "Constant Operand":"1 (0x1)"
+                    , "Start Cycle":"50"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1901746352
+                , "start":"67"
+                , "end":"67"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Add"
+                    , "Start Cycle":"52"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Xor"
+                , "id":1909779232
+                , "start":"68"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"1-bit Xor"
+                    , "Constant Operand":"1 (0x1)"
+                    , "Start Cycle":"53"
+                    , "Latency":"0"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"A"
+                , "id":1900373264
+                , "start":"15"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'A'"
+                    , "Start Cycle":"0"
+                    , "Latency":"53"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Ptr. Comp."
+                , "id":1902511984
+                , "start":"68"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Pointer Computation"
+                    , "Start Cycle":"53"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":1900438896
+                , "start":"68"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Start Cycle":"53"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Xor"
+                , "id":1910184208
+                , "start":"68"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"1-bit Xor"
+                    , "Constant Operand":"1 (0x1)"
+                    , "Start Cycle":"53"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"B"
+                , "id":1909709328
+                , "start":"15"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'B'"
+                    , "Start Cycle":"0"
+                    , "Latency":"53"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":1911674400
+                , "start":"17"
+                , "end":"17"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"And"
+                , "id":1911247920
+                , "start":"17"
+                , "end":"17"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"1-bit And"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Or"
+                , "id":1911739824
+                , "start":"68"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"1-bit Or"
+                    , "Start Cycle":"53"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"N"
+                , "id":1911740176
+                , "start":"15"
+                , "end":"64"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'N'"
+                    , "Start Cycle":"0"
+                    , "Latency":"49"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"*"
+                , "id":1909708624
+                , "start":"64"
+                , "end":"67"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Multiply"
+                    , "Start Cycle":"49"
+                    , "Latency":"3"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"+"
+                , "id":1909708976
+                , "start":"68"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Add"
+                    , "Start Cycle":"53"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Ptr. Comp."
+                , "id":1910759968
+                , "start":"68"
+                , "end":"68"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Pointer Computation"
+                    , "Start Cycle":"53"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":1911857184
+                , "start":"17"
+                , "end":"17"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":8
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Select"
+                , "id":1911410480
+                , "start":"17"
+                , "end":"17"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"33-bit Select"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":1910222400
+                , "start":"68"
+                , "end":"71"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Start Cycle":"53"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"512"
+                    , "Exit FIFO Width":"320"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+          , {
+            "name":"LD"
+            , "id":1911329456
+            , "start":"71"
+            , "end":"231"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Load"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Start Cycle":"56"
+                , "Latency":"160"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                  , "line":17
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"LD"
+            , "id":1905168656
+            , "start":"71"
+            , "end":"231"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Load"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Start Cycle":"56"
+                , "Latency":"160"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                  , "line":17
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Cluster 3"
+            , "id":1902168480
+            , "start":"231"
+            , "end":"239"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c1_in_for_body4_mmuls_c1_enter_mmul6"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"216"
+                , "Cluster Latency":"8"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"f32 FP Accum"
+                , "id":1905517952
+                , "start":"232"
+                , "end":"236"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Accumulator"
+                    , "Start Cycle":"217"
+                    , "Latency":"4"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"FFwd Dest"
+                , "id":1911569328
+                , "start":"236"
+                , "end":"236"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"FFwd Destination"
+                    , "Start Cycle":"221"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Select"
+                , "id":1900321712
+                , "start":"236"
+                , "end":"236"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Select"
+                    , "Start Cycle":"221"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                      , "line":17
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":1900420048
+                , "start":"236"
+                , "end":"239"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Start Cycle":"221"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"32"
+                    , "Exit FIFO Width":"64"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+        ]
+      }
+      , {
+        "name":"mmul.B3"
+        , "id":1896499136
+        , "start":"239"
+        , "end":"242"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"C"
+            , "id":1911429632
+            , "start":"240"
+            , "end":"240"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Input Synchronization for 'C'"
+                , "Start Cycle":"1"
+                , "Latency":"0"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Ptr. Comp."
+            , "id":1910684576
+            , "start":"240"
+            , "end":"240"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Pointer Computation"
+                , "Start Cycle":"1"
+                , "Latency":"0"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                  , "line":19
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"FFwd Dest"
+            , "id":1901139968
+            , "start":"239"
+            , "end":"240"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"FFwd Destination"
+                , "Start Cycle":"0"
+                , "Latency":"1"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                  , "line":19
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"ST"
+            , "id":1905168128
+            , "start":"240"
+            , "end":"242"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Store"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Start Cycle":"1"
+                , "Latency":"2"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_taskV2.cl"
+                  , "line":19
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"mmul.B1"
+        , "id":1896960176
+        , "start":"242"
+        , "end":"243"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":1910684576
+        , "to":1905168128
+      }
+      , {
+        "from":1896499136
+        , "to":1896499056
+      }
+      , {
+        "from":1896499136
+        , "to":1896960176
+      }
+      , {
+        "from":1900321712
+        , "to":1900420048
+      }
+      , {
+        "from":1905517952
+        , "to":1900321712
+      }
+      , {
+        "from":1911329456
+        , "to":1902168480
+      }
+      , {
+        "from":1910759968
+        , "to":1910222400
+      }
+      , {
+        "from":1909708976
+        , "to":1910759968
+      }
+      , {
+        "from":1901139968
+        , "to":1905168128
+      }
+      , {
+        "from":1909708624
+        , "to":1909708976
+      }
+      , {
+        "from":1911429632
+        , "to":1910684576
+      }
+      , {
+        "from":1909709328
+        , "to":1910759968
+      }
+      , {
+        "from":1905168656
+        , "to":1902168480
+      }
+      , {
+        "from":1910184208
+        , "to":1911739824
+      }
+      , {
+        "from":1900438896
+        , "to":1910184208
+      }
+      , {
+        "from":1902511984
+        , "to":1910222400
+      }
+      , {
+        "from":1900373264
+        , "to":1902511984
+      }
+      , {
+        "from":1909779232
+        , "to":1910222400
+      }
+      , {
+        "from":1901746352
+        , "to":1902511984
+      }
+      , {
+        "from":1910184560
+        , "to":1901746352
+      }
+      , {
+        "from":1910184560
+        , "to":1909708624
+      }
+      , {
+        "from":1910184560
+        , "to":1909779584
+      }
+      , {
+        "from":1911569328
+        , "to":1900321712
+      }
+      , {
+        "from":1900438544
+        , "to":1901746352
+      }
+      , {
+        "from":1910299280
+        , "to":1900438544
+      }
+      , {
+        "from":1910299280
+        , "to":1910222400
+      }
+      , {
+        "from":1911410832
+        , "to":1910555088
+      }
+      , {
+        "from":1900793344
+        , "to":1902168480
+      }
+      , {
+        "from":1900793344
+        , "to":1905168656
+      }
+      , {
+        "from":1900793344
+        , "to":1911329456
+      }
+      , {
+        "from":1901056816
+        , "to":1905348832
+      }
+      , {
+        "from":1910802048
+        , "to":1915723856
+      }
+      , {
+        "from":1910802048
+        , "to":1915724208
+      }
+      , {
+        "from":1909897808
+        , "to":1909898880
+      }
+      , {
+        "from":1915724560
+        , "to":1915944960
+      }
+      , {
+        "from":1913356432
+        , "to":1910756320
+      }
+      , {
+        "from":1896960032
+        , "to":1896499056
+      }
+      , {
+        "from":1915723504
+        , "to":1915723856
+      }
+      , {
+        "from":1909898880
+        , "to":1910802048
+      }
+      , {
+        "from":1905524176
+        , "to":1905524528
+      }
+      , {
+        "from":1911740176
+        , "to":1909708624
+      }
+      , {
+        "from":1905523824
+        , "to":1905524176
+      }
+      , {
+        "from":1896499056
+        , "to":1896499216
+      }
+      , {
+        "from":1911739824
+        , "to":1910222400
+      }
+      , {
+        "from":1905523472
+        , "to":1905523824
+      }
+      , {
+        "from":1905523472
+        , "to":1905524176
+      }
+      , {
+        "from":1911674400
+        , "to":1911247920
+      }
+      , {
+        "from":1911857184
+        , "to":1911410480
+      }
+      , {
+        "from":1915944960
+        , "to":1905348832
+      }
+      , {
+        "from":1910802400
+        , "to":1915723504
+      }
+      , {
+        "from":1900818064
+        , "to":1900818768
+      }
+      , {
+        "from":1905327456
+        , "to":1905528496
+      }
+      , {
+        "from":1905327456
+        , "to":1911645232
+      }
+      , {
+        "from":1905470288
+        , "to":1905528496
+      }
+      , {
+        "from":1915723856
+        , "to":1913356784
+      }
+      , {
+        "from":1900818768
+        , "to":1911523584
+      }
+      , {
+        "from":1915724208
+        , "to":1911643312
+      }
+      , {
+        "from":1900819120
+        , "to":1905523472
+      }
+      , {
+        "from":1905470640
+        , "to":1905528496
+      }
+      , {
+        "from":1909580176
+        , "to":1905470288
+      }
+      , {
+        "from":1911247920
+        , "to":1910222400
+      }
+      , {
+        "from":1911247920
+        , "to":1911410480
+      }
+      , {
+        "from":1905524528
+        , "to":1913356432
+      }
+      , {
+        "from":1905348832
+        , "to":1900818064
+      }
+      , {
+        "from":1896499216
+        , "to":1896499136
+      }
+    ]
+  }
+}

@@ -161,7 +161,7 @@
                     [
                       {
                         "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
-                        , "line":15
+                        , "line":16
                       }
                     ]
                   ]
@@ -183,7 +183,7 @@
                           [
                             {
                               "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
-                              , "line":"17"
+                              , "line":"18"
                             }
                           ]
                         }
@@ -194,7 +194,7 @@
                           [
                             {
                               "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/NDRangeVsSimpleTask/test_simulation/Simple_task.cl"
-                              , "line":"17"
+                              , "line":"18"
                             }
                           ]
                         }

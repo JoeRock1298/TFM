@@ -3,73 +3,73 @@
   [
     {
       "name":"mmul"
-      , "id":937670088
+      , "id":4136990136
       , "type":"kernel"
       , "children":
       [
         {
+          "name":"mmul.B5"
+          , "id":4136523088
+          , "type":"bb"
+        }
+        , {
           "name":"mmul.B3"
-          , "id":937204784
+          , "id":4136522928
           , "type":"bb"
           , "children":
           [
             {
               "name":"Cluster 1"
-              , "id":941005088
-              , "type":"cluster"
-            }
-          ]
-        }
-        , {
-          "name":"mmul.B5"
-          , "id":937204944
-          , "type":"bb"
-        }
-        , {
-          "name":"mmul.B4"
-          , "id":937204864
-          , "type":"bb"
-        }
-        , {
-          "name":"mmul.B1"
-          , "id":937723600
-          , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 0"
-              , "id":940611680
-              , "type":"cluster"
-            }
-          ]
-        }
-        , {
-          "name":"mmul.B2"
-          , "id":937204704
-          , "type":"bb"
-        }
-        , {
-          "name":"mmul.B6"
-          , "id":937205024
-          , "type":"bb"
-          , "children":
-          [
-            {
-              "name":"Cluster 3"
-              , "id":942473760
-              , "type":"cluster"
-            }
-            , {
-              "name":"Cluster 2"
-              , "id":941673552
+              , "id":4140325008
               , "type":"cluster"
             }
           ]
         }
         , {
           "name":"mmul.B0"
-          , "id":937685296
+          , "id":4137005344
           , "type":"bb"
+        }
+        , {
+          "name":"mmul.B6"
+          , "id":4136523168
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":4140993472
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 3"
+              , "id":4141793648
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"mmul.B2"
+          , "id":4136522848
+          , "type":"bb"
+        }
+        , {
+          "name":"mmul.B4"
+          , "id":4136523008
+          , "type":"bb"
+        }
+        , {
+          "name":"mmul.B1"
+          , "id":4137043648
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":4139931600
+              , "type":"cluster"
+            }
+          ]
         }
       ]
     }

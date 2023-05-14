@@ -1,0 +1,3 @@
+{"nodes":[
+{"debug":[[{"filename":"Simple_taskV2.cl","line":"15"}]],"details":[{"text":"warning: Simple_taskV2.cl:15:9: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering"}],"name":"Simple_taskV2.cl:15:9: loop not unrolled: the optimizer was unable to perform the requested transformation; the transformation might be disabled or specified as part of an unsupported transformation ordering"}
+]}
