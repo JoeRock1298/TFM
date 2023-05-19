@@ -1,0 +1,116 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"Global variable"
+      , "id":4294967295
+      , "src":"2873070528"
+      , "dst":"2881128800"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"conv2d1x1.B6"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"Global variable"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"240.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"f32 +(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_simple_task.cl"
+                  , "line":"35"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"Global variable"
+          , "id":2873070528
+          , "start":"149.00"
+          , "parent":"conv2d1x1.B6"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_simple_task.cl"
+                , "line":18
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 +"
+          , "id":2881128448
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_simple_task.cl"
+                , "line":35
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":2881128800
+          , "end":"152.00"
+          , "parent":"conv2d1x1.B6"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_simple_task.cl"
+                , "line":35
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":2873070528
+          , "to":2881128448
+        }
+        , {
+          "from":2881128448
+          , "to":2881128800
+        }
+        , {
+          "from":2873070528
+          , "to":2881128800
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

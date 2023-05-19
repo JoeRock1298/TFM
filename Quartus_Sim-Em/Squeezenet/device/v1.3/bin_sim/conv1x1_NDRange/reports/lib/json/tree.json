@@ -1,0 +1,78 @@
+{
+  "nodes":
+  [
+    {
+      "name":"conv2d1x1"
+      , "id":3961750696
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"conv2d1x1.B1"
+          , "id":3961764064
+          , "type":"bb"
+        }
+        , {
+          "name":"conv2d1x1.B3"
+          , "id":3961798896
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":3964889664
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B0"
+          , "id":3961763984
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":3963950480
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B4"
+          , "id":3961798976
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":3965682448
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 3"
+              , "id":3965173104
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B2"
+          , "id":3961764144
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":3964728096
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}
