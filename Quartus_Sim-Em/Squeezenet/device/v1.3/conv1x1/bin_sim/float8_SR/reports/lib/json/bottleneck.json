@@ -1,0 +1,443 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"?"
+      , "id":4294967295
+      , "src":"1752982032"
+      , "dst":"1751727328"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"conv2d1x1.B8"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Loop: ":"conv2d1x1.B8"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"34"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"240.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"38"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"39"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"40"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"41"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"42"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"43"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"44"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f32 FP *+(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"45"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"?"
+          , "id":1752982032
+          , "start":"151.00"
+          , "parent":"conv2d1x1.B8"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":50
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1753779088
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":38
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1717509616
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":39
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1752169024
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":40
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1749477584
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":41
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1770611312
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":42
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1759651504
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":43
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1754622608
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":44
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f32 FP *+"
+          , "id":1749513200
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":45
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1751727328
+          , "end":"153.00"
+          , "parent":"conv2d1x1.B8"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":28
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1752982032
+          , "to":1751727328
+          , "reverse":1
+        }
+      ]
+    }
+    , {
+      "name":"shift_reg"
+      , "id":4294967295
+      , "src":"1715419120"
+      , "dst":"1752517776"
+      , "concurrency":"4"
+      , "type":"Occupancy limiter"
+      , "brief":"Data dependency"
+      , "loop":"conv2d1x1.B4"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"shift_reg"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"28"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Concurrency value: ":"4"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"Loop: conv2d1x1.B6(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"29"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: conv2d1x1.B5(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"34"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: conv2d1x1.B8(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                  , "line":"34"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"shift_reg"
+          , "id":1715419120
+          , "start":"5.00"
+          , "parent":"conv2d1x1.B4"
+          , "type":"inst"
+        }
+        , {
+          "name":"conv2d1x1.B6"
+          , "id":1716330752
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":29
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"conv2d1x1.B5"
+          , "id":1716056576
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":34
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"conv2d1x1.B8"
+          , "id":1744087568
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float8_SR.cl"
+                , "line":34
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"Feedback"
+          , "id":1752517776
+          , "end":"6.00"
+          , "parent":"conv2d1x1.B7"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":1716330752
+          , "to":1716330752
+        }
+        , {
+          "from":1716330752
+          , "to":1716056576
+        }
+        , {
+          "from":1716056576
+          , "to":1744087568
+        }
+        , {
+          "from":1744087568
+          , "to":1744087568
+        }
+        , {
+          "from":1715419120
+          , "to":1716330752
+        }
+        , {
+          "from":1744087568
+          , "to":1752517776
+        }
+        , {
+          "from":1715419120
+          , "to":1752517776
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"'shift_reg'"
+      , "id":4294967295
+      , "src":"3286491408"
+      , "dst":"3298694000"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"double_add_2.B4"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"'shift_reg'"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"175.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"Select(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                  , "line":"26"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Select(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                  , "line":"26"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"f64 +(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                  , "line":"20"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"'shift_reg'"
+          , "id":3286491408
+          , "start":"18.00"
+          , "parent":"double_add_2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                , "line":26
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Select"
+          , "id":3289519616
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                , "line":26
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Select"
+          , "id":3290621776
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                , "line":26
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f64 +"
+          , "id":3298693648
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                , "line":20
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":3298694000
+          , "end":"19.00"
+          , "parent":"double_add_2.B4"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_opt.cl"
+                , "line":20
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":3298693648
+          , "to":3298694000
+        }
+        , {
+          "from":3286491408
+          , "to":3298694000
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

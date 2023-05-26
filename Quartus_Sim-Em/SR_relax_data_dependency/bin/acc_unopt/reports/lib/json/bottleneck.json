@@ -1,0 +1,116 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"'temp_sum,temp_sum'"
+      , "id":4294967295
+      , "src":"3706113600"
+      , "dst":"3706116592"
+      , "type":"fMAX/II"
+      , "brief":"Data dependency"
+      , "loop":"double_add_1.B2"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"'temp_sum,temp_sum'"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"Unknown location"
+                  , "line":"0"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Estimated fmax reduced to: ":"120.0"
+          , "Loop feedback path that lowered II and Fmax: ":
+          [
+            {
+              "type":"text"
+              , "text":"f64 +(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_unopt.cl"
+                  , "line":"7"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"'temp_sum,temp_sum'"
+          , "id":3706113600
+          , "start":"17.00"
+          , "parent":"double_add_1.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_unopt.cl"
+                , "line":7
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"f64 +"
+          , "id":3706116240
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_unopt.cl"
+                , "line":7
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Feedback"
+          , "id":3706116592
+          , "end":"27.00"
+          , "parent":"double_add_1.B2"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/SR_relax_data_dependency/acc_unopt.cl"
+                , "line":7
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":3706113600
+          , "to":3706116240
+        }
+        , {
+          "from":3706116240
+          , "to":3706116592
+        }
+        , {
+          "from":3706113600
+          , "to":3706116592
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

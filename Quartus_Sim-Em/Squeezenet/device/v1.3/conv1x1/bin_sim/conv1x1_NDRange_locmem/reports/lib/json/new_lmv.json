@@ -1,0 +1,321 @@
+{
+  "nodes":
+  [
+    {
+      "name":"conv2d1x1"
+      , "id":3252853400
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"Local Memory"
+          , "id":1
+          , "type":"memtype"
+          , "children":
+          [
+            {
+              "name":"im_in"
+              , "id":2
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Declared at":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"%L"
+                      , "links":
+                      [
+                        {
+                          "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_NDRange_locmem.cl"
+                          , "line":"28"
+                        }
+                      ]
+                    }
+                  ]
+                  , "Requested size":"2000 kilobytes = 512 work-item copies x 4000 bytes"
+                  , "Implemented size":"4 megabytes = (2 private copies) x (131072 words per bank) x (16 bytes per word)"
+                  , "Memory Usage":"2048 RAMs"
+                  , "Number of banks":"1"
+                  , "Bank width (word size)":"16 bytes"
+                  , "Bank depth":"131072 words"
+                  , "Number of replicates":"1"
+                  , "Number of private copies":"2"
+                  , "RAM Mode":"Simple dual-port"
+                  , "Pump configuration":"Single-pumped"
+                  , "Additional information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Created 512 work-item copies for variable 'im_in' to support 512 work-items per work group.</br>"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"In each private copy:</br>  Variable 'im_in' occupies memory words [0-127999] and has 1 array element per memory word.</br>  Memory words [128000-131071] are unused padding."
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"For each replicate, 2 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                    }
+                  ]
+                  , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bit</td><td>b<sub>21</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/chn1469549457114.html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_NDRange_locmem.cl"
+                    , "line":28
+                  }
+                ]
+              ]
+              , "type":"memsys"
+              , "children":
+              [
+                {
+                  "name":"Bank 0"
+                  , "id":3
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "Memory Usage":"2048 RAMs"
+                      , "Bank width":"16 bytes"
+                      , "Bank depth":"131072 words"
+                      , "Implemented bank size":"4 megabytes = (2 private copies) x (131072 words) x (16 bytes per word)"
+                      , "Number of active ports":"2"
+                      , "Number of read ports":"1"
+                      , "Number of write ports":"1"
+                      , "Additional information":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Created 512 work-item copies for variable 'im_in' to support 512 work-items per work group.</br>"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"In each private copy:</br>  Variable 'im_in' occupies memory words [0-127999] and has 1 array element per memory word.</br>  Memory words [128000-131071] are unused padding."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"For each replicate, 2 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                        }
+                      ]
+                      , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bit</td><td>b<sub>21</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                    }
+                  ]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_NDRange_locmem.cl"
+                        , "line":28
+                      }
+                    ]
+                  ]
+                  , "type":"bank"
+                  , "children":
+                  [
+                    {
+                      "name":"Replicate 0"
+                      , "id":4
+                      , "padding":"3072"
+                      , "depth":"131072"
+                      , "details":
+                      [
+                        {
+                          "type":"table"
+                          , "Implemented size":"4 megabytes = (2 private copies) x (131072 words) x (16 bytes per word)"
+                          , "Memory Usage":"2048 RAMs"
+                          , "Number of physical ports":"2"
+                          , "Number of read ports":"1"
+                          , "Number of write ports":"1"
+                          , "Additional information":
+                          [
+                            {
+                              "type":"text"
+                              , "text":"Created 512 work-item copies for variable 'im_in' to support 512 work-items per work group.</br>"
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"In each private copy:</br>  Variable 'im_in' occupies memory words [0-127999] and has 1 array element per memory word.</br>  Memory words [128000-131071] are unused padding."
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"For each replicate, 2 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                            }
+                          ]
+                          , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bit</td><td>b<sub>21</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                        }
+                      ]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_NDRange_locmem.cl"
+                            , "line":28
+                          }
+                        ]
+                      ]
+                      , "type":"replicate"
+                      , "children":
+                      [
+                        {
+                          "name":"R"
+                          , "id":5
+                          , "type":"port"
+                        }
+                        , {
+                          "name":"W"
+                          , "id":6
+                          , "type":"port"
+                        }
+                      ]
+                      , "copies":
+                      {
+                        "num":2
+                        , "details":
+                        [
+                          {
+                            "type":"table"
+                            , "Width":"16 bytes"
+                            , "Depth per copy (including padding)":"131072 words"
+                            , "Number of private copies":"2"
+                            , "Additional information":
+                            [
+                              {
+                                "type":"text"
+                                , "text":"Created 512 work-item copies for variable 'im_in' to support 512 work-items per work group.</br>"
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"In each private copy:</br>  Variable 'im_in' occupies memory words [0-127999] and has 1 array element per memory word.</br>  Memory words [128000-131071] are unused padding."
+                              }
+                              , {
+                                "type":"text"
+                                , "text":"For each replicate, 2 private copies were created to efficiently support multiple simultaneous workgroups.</br>"
+                              }
+                            ]
+                            , "Address bit information":"<table><tr><td>Byte address</td><td>b<sub>21</sub></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td>b<sub>3</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>0</sub></td></tr><tr><td>Sub-word bits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Word address bits</td><td></td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td><td></td><td></td><td></td><td></td></tr><tr><td>Private-copy bit</td><td>b<sub>21</sub></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+                            , "Memory word address pattern":"<table><tr><td>Private copy 0: </td><td>0</td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td></tr><tr><td>Private copy 1: </td><td>1</td><td>b<sub>20</sub></td><td>b<sub>19</sub></td><td>b<sub>18</sub></td><td>b<sub>17</sub></td><td>b<sub>16</sub></td><td>b<sub>15</sub></td><td>b<sub>14</sub></td><td>b<sub>13</sub></td><td>b<sub>12</sub></td><td>b<sub>11</sub></td><td>b<sub>10</sub></td><td>b<sub>9</sub></td><td>b<sub>8</sub></td><td>b<sub>7</sub></td><td>b<sub>6</sub></td><td>b<sub>5</sub></td><td>b<sub>4</sub></td></tr></table>"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"Load"
+          , "id":3253320888
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Loads from":"im_in"
+              , "Start cycle":"140"
+              , "Latency":"3"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_NDRange_locmem.cl"
+                , "line":42
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+        , {
+          "name":"Store"
+          , "id":3253320120
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Stall-free":"Yes"
+              , "Type":"Pipelined never-stall"
+              , "Stores to":"im_in"
+              , "Start cycle":"139"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/yeo1491314105959.html"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv1x1_NDRange_locmem.cl"
+                , "line":35
+              }
+            ]
+          ]
+          , "type":"inst"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":5
+      , "to":3253320888
+    }
+    , {
+      "from":3253320120
+      , "to":6
+    }
+  ]
+}

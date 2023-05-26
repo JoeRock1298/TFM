@@ -1,0 +1,3 @@
+{"nodes":[
+{"debug":[[{"filename":"acc_unopt.cl","line":"1"}]],"details":[{"text":"Compiler Warning: acc_unopt.cl:1: declaring global arguments 'arr' and 'result' with no 'restrict' may lead to low performance for kernel 'double_add_1'"}],"name":"acc_unopt.cl:1: declaring global arguments 'arr' and 'result' with no 'restrict' may lead to low performance for kernel 'double_add_1'"}
+]}

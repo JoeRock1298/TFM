@@ -1,0 +1,119 @@
+{
+  "nodes":
+  [
+    {
+      "name":"conv2d1x1"
+      , "id":1701196456
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"conv2d1x1.B4"
+          , "id":1701230464
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":1708142592
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B5"
+          , "id":1701230544
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":1708894576
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B3"
+          , "id":1701230384
+          , "type":"bb"
+        }
+        , {
+          "name":"conv2d1x1.B6"
+          , "id":1701230624
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":1709489872
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B0"
+          , "id":1701269072
+          , "type":"bb"
+        }
+        , {
+          "name":"conv2d1x1.B8"
+          , "id":1701230992
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 7"
+              , "id":1714144832
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 6"
+              , "id":1712325040
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B7"
+          , "id":1701230912
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":1711001408
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 5"
+              , "id":1711472560
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B2"
+          , "id":1701230304
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":1707493904
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B1"
+          , "id":1701269152
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

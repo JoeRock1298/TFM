@@ -1,0 +1,78 @@
+{
+  "nodes":
+  [
+    {
+      "name":"conv2d1x1"
+      , "id":3252853400
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"conv2d1x1.B1"
+          , "id":3253230048
+          , "type":"bb"
+        }
+        , {
+          "name":"Fused loop conv2d1x1.B3"
+          , "id":3252698704
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":3256574544
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 3"
+              , "id":3257086560
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B4"
+          , "id":3252698784
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":3257519808
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B2"
+          , "id":3252698624
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":3256320960
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B0"
+          , "id":3253229968
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":3255842288
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

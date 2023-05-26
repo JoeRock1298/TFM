@@ -1,0 +1,114 @@
+{
+  "nodes":
+  [
+    {
+      "name":"conv2d1x1"
+      , "id":722238648
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"conv2d1x1.B7"
+          , "id":722585648
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":731350512
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B6"
+          , "id":722585360
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":730032016
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B8"
+          , "id":722585728
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 6"
+              , "id":733632528
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 5"
+              , "id":732204880
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B4"
+          , "id":722585200
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":728783344
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B3"
+          , "id":722585120
+          , "type":"bb"
+        }
+        , {
+          "name":"conv2d1x1.B2"
+          , "id":722585040
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":728134992
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B1"
+          , "id":722623936
+          , "type":"bb"
+        }
+        , {
+          "name":"conv2d1x1.B5"
+          , "id":722585280
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":729527504
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"conv2d1x1.B0"
+          , "id":722623856
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

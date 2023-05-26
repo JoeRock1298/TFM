@@ -1,0 +1,1 @@
+var infoJSON={"compileInfo":{"nodes":[{"command":"aoc -march=simulator -v -ghdl acc_opt.cl -o bin/acc_opt_1.aocx -board=a10gx","family":"Arria 10, 10AX115S2F45I1SG, a10_ref:a10gx","id":1,"name":"acc_opt_1","product":"OPENCL","quartus":"21.1.0 Build 169 Pro","time":"Tue May 23 14:04:37 2023","version":"21.1.0 Build 173.3"}]}};

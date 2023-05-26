@@ -1,0 +1,5 @@
+conv2d1x1,target_fmax,240
+conv2d1x1,conv2d1x1.B2,II,1
+conv2d1x1,conv2d1x1.B4,II,1
+conv2d1x1,conv2d1x1.B8,II,1
+conv2d1x1,conv2d1x1.B6,II,1

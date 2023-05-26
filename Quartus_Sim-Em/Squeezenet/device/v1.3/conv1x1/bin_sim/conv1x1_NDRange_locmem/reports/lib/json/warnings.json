@@ -1,0 +1,3 @@
+{"nodes":[
+{"details":[{"text":"Compiler Warning: Limiting maximum work-group size to 512 in function conv2d1x1(...) to support private memory."}],"name":"Limiting maximum work-group size to 512 in function conv2d1x1(...) to support private memory."}
+]}

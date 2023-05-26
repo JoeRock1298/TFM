@@ -1,0 +1,629 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<ENABLE_HYPER_OPTIMIZATIONS value="0" />
+	<USE_SYNC_RESET value="0" />
+	<TOP_LEVEL_RESET_EXTENDER value="0" />
+	<ENABLE_STALL_LATENCY value="0" />
+	<ENABLE_ECC value="0" />
+	<GLOBAL_WRITE_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_READ_LSU_IC_DATA_LATENESS value="0" />
+	<GLOBAL_LSU_IC_WIDE_DATA_SLICING value="0" />
+	<ALLOW_HIGH_SPEED_FIFO_USAGE value="0" />
+	<KERNEL_BUNDLE name="conv2d1x1" kname="conv2d1x1" compute_units="1">
+	<KERNEL name="conv2d1x1" kname="conv2d1x1" filename="kernel_hdl/conv2d1x1/conv2d1x1_function_wrapper.sv" version="1" cosim_name="" enable_global_profiling="1" workgroup_invariant="0" workitem_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<LOCAL_MEM aspace="64" begin="0" next="512" banks="1" width="1024" static_demand="128" num_groups="1" has_atomics="0" ports="4" write_ports="4" rdw_mode="0" repl_fac="1" ic_req_latency="0" ic_rrp_latency="0" ic_wrp_latency="0" req_pipe_interval="0" ret_fanout="0" num_ports_per_phys_mem="4" phys_mem_latency="4" minimize_memory_usage="0" enable="0" lmem_type="AUTO" ram_mode="0" use_mif_file="0" use_2x_mem="1" num_words="4" address_width="2" num_words_per_bank="4" bank_address_width="2" use_byteena="1">
+				<BANK id="0">
+					<PORT id="0" register="0" />
+					<PORT id="1" register="0" />
+					<PORT id="2" register="0" />
+					<PORT id="3" register="0" />
+				</BANK>
+			</LOCAL_MEM>
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="128" />
+			<MAX_WORK_GROUP_SIZE num="3" values="1, 1, 1" />
+			<REQUIRED_WORK_GROUP_SIZE x="1" y="1" z="1" />
+			<FAST_RELAUNCH_DEPTH value="1" />
+			<USES_GLOBAL_WORK_OFFSET value="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="slave" cosim_name="conv2d1x1_function_cra_slave" read="1" write="1" width="64" is_volatile="0" size="256" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/linux64/lib/dspba/Libraries/sv/base/dspba_library_ver.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_pkg.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_altera_syncram_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_scfifo_wrapped.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_decoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ecc_encoder.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mid_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_one_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_latency_zero_ram_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_mlab_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_parameter_assert.svh" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pop.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ffwdsrc.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_token_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pipeline.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ffwddst.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_decr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_master.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_global_load_store.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_burst_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_coalescer_dynamic_timeout.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_data_aligner.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_cache.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_read_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_unaligned_controller.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_word_coalescer.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_data_alignment.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_lsu_write_kernel_downstream.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_shift_register_no_reset.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_loop_profiler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_sim_latency_tracker.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_limiter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_function_wrapper.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_function.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B0_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B0_merge_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_source_i1_unnamed_0_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_source_i1_unnamed_2_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_source_i32_unnamed_1_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_source_i33_unnamed_3_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_source_i33_unnamed_4_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_throttle_i1_throttle_pop_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_throttle_i1_throttle_pop_0_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_filter_size_sync_buffer4_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_filter_size_sync_buffer5_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_filter_size_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_in0000nnels_sync_buffer2_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_in0000nnels_sync_buffer3_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_in0000annels_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_input_size_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B0_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B0_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B1.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B1_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_token_i1_throttle_push_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_token_i1_throttle_push_0_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B1_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B1_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B2.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B2_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B2_merge_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c0_in_for_body_s_c0_enter78_conv2d1x11.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_0000s_c0_exit_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00002d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_0000conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c0_in_for_body_s_c0_enter78_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i1_cmp10613_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i1_cmp10614_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i1_cmp129919_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i32_input_size_sync_buffer17_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i32_input_size_sync_buffer18_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i33_unnamed_5_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going52_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_f_i_0107_pop11_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i33_fpga_indvars_iv38_pop10_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notexitcond53_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_f_i_0107_push11_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i33_fpga_indvars_iv38_push10_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_i32_in0000nnels_sync_buffer1_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000r_bias_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B2_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B2_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B3.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B3_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B3_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B3_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B4.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B4_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i10_ap_pop_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i10_ap_pop_3_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B4_merge_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c0_in_for_body4_s_c0_enter25079_conv2d1x11.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00000_exit263_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00012d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_0001conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c0_in_for_body4_0000nter25079_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going48_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_lm59_pop18_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_notcmp5168_pop21_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop15_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop16_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop17_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_ij_0104_pop13_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul15665_pop20_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul2162_pop19_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul56_pop14_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i33_fpga_indvars_iv34_pop12_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_lm59_push18_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notcmp5168_push21_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notexitcond49_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push15_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push16_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push17_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_ij_0104_push13_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul15665_push20_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul2162_push19_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul56_push14_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i33_fpga_indvars_iv34_push12_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B4_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B4_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B5.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B5_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c0_in_for_cond11_prehe0000_enter276_conv2d1x11.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00000_exit298_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00022d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_0002conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c0_in_for_cond110000_enter276_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_memcoalesce_lo0000nique_254_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B5_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B5_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B6.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B6_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B6_merge_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c0_in_for_body8_s_c0_enter33280_conv2d1x11.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00000_exit365_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00032d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_0003conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c0_in_for_body8_0000nter33280_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_unnamed_15_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going34_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_lm60_pop30_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i10_ap_pop71_pop34_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_notcmp4672_pop35_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_notcmp5169_pop33_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop27_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop28_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop29_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i2_cleanups37_pop25_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i2_initerations32_pop24_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_i_097_pop23_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_ij_0104_pop1374_pop36_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul15666_pop32_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul2163_pop31_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul57_pop26_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i6_fpga_indvars_iv_pop22_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_lm60_push30_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i10_ap_pop71_push34_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_lastiniteration36_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notcmp4672_push35_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notcmp5169_push33_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notexitcond44_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push27_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push28_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push29_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i2_cleanups37_push25_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i2_initerations32_push24_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_i_097_push23_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_ij_0104_pop1374_push36_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul15666_push32_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul2163_push31_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul57_push26_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i6_fpga_indvars_iv_push22_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B6_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B6_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B7.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B7_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_unnamed_16_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_token_priv_i10_ap_push_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_token_priv_i10_ap_push_58_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000put_im_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c0_in_for_cond141_preh0000enter409_conv2d1x155.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00000_exit432_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00042d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_0004conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c0_in_for_cond140000_enter409_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_memdep_13_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c1_in_for_cond141_preh0000c1_enter_conv2d1x126.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c1_out_0000s_c1_exit_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c1_out_00002d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c1_out_0000conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c1_in_for_cond140000_c1_enter_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_flt_i_sfc_logic_s_c1_in_for_co0000454ge26154g226150y05.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B7_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B7_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B8.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B8_stall_region.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm220_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm220_2.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm223_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm223_4.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm225_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm225_5.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm227_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm227_6.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm229_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm229_7.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm231_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm231_8.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm233_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm233_9.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm235_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm235_10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B8_merge_reg.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_mem_lm222_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_readdata_reg_lm222_3.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c0_in_for_body14_s_c0_enter46381_conv2d1x11.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00000_exit514_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_00052d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c0_out_0005conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c0_in_for_body140000nter46381_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i33_unnamed_21_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_lm61_pop69_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_notcmp4673_pop73_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_notcmp5170_pop72_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop66_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop67_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i1_pop68_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i2_cleanups_pop64_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i2_initerations_pop63_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_ij_0104_pop1375_pop74_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_k_0100_pop62_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul15667_pop71_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul2164_pop70_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i32_mul58_pop65_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i33_fpga_indvars_iv31_pop37_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_i64_ap_pop_ext5100_pop99_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_lm61_push69_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_lastiniteration_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notcmp4673_push73_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notcmp5170_push72_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_notexitcond_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push66_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push67_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i1_push68_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i2_cleanups_push64_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i2_initerations_push63_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_ij_0104_pop1375_push74_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_k_0100_push62_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul15667_push71_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul2164_push70_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i32_mul58_push65_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i33_fpga_indvars_iv31_push37_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_i64_ap_pop_ext5100_push99_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000t_im_sync_buffer10_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000t_im_sync_buffer11_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000t_im_sync_buffer12_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000ut_im_sync_buffer6_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000ut_im_sync_buffer7_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000ut_im_sync_buffer8_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0000ut_im_sync_buffer9_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024f0001put_im_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sync_buffer_p1024v0000weight_sync_buffer_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_s_c1_in_for_body14_s_c1_enter564_conv2d1x115.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c1_out_00001_exit591_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c1_out_00012d1x11_full_detector.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_sfc_exit_s_c1_out_0001conv2d1x11_data_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_sfc_logic_s_c1_in_for_body140000_enter564_conv2d1x10.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_ffwd_dest_i1_cmp129920_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_flt_i_sfc_logic_s_c1_in_for_bo0000xk5id06uq0cp0jv34qcz.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx130000promoted_e94_pop93_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx130000promoted_e95_pop94_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx130000promoted_e96_pop95_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx130000promoted_e97_pop96_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx130000promoted_e98_pop97_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx130000promoted_e99_pop98_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx131_3_promoted_e87_pop86_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx131_4_promoted_e88_pop87_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx131_5_promoted_e89_pop88_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx131_6_promoted_e90_pop89_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx131_7_promoted_e91_pop90_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx131_8_promoted_e92_pop91_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_arrayidx131_9_promoted_e93_pop92_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop38_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop39_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop40_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop41_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop42_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop43_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop44_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop45_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop46_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop47_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop48_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop49_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop50_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop51_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop52_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop53_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop54_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop55_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop56_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop57_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop58_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop59_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop60_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pop61_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre109_e77_pop76_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre110_e78_pop77_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre111_e79_pop78_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre112_e80_pop79_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre113_e81_pop80_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre114_e82_pop81_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre115_e83_pop82_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre116_e84_pop83_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre117_e85_pop84_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre118_e86_pop85_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pop_f32_pre_e76_pop75_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e94_push93_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e95_push94_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e96_push95_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e97_push96_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e98_push97_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e99_push98_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e87_push86_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e88_push87_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e89_push88_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e90_push89_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e91_push90_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e92_push91_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_arrayidx10000romoted_e93_push92_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre109_e77_push76_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre110_e78_push77_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre111_e79_push78_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre112_e80_push79_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre113_e81_push80_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre114_e82_push81_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre115_e83_push82_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre116_e84_push83_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre117_e85_push84_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre118_e86_push85_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_pre_e76_push75_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push38_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push39_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push40_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push41_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push42_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push43_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push44_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push45_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push46_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push47_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push48_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push49_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push50_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push51_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push52_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push53_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push54_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push55_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push56_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push57_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push58_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push59_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push60_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_push_f32_push61_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B8_branch.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_B8_merge.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going34_6_sr.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going34_6_valid_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going48_2_sr.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going48_2_valid_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going52_2_sr.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going52_2_valid_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going_6_sr.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_i_llvm_fpga_pipeline_keep_going_6_valid_fifo.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_loop_limiter_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_loop_limiter_1.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_loop_limiter_2.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B1_sr_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B2_sr_1.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B3_sr_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B4_sr_1.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B5_sr_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B6_sr_1.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B7_sr_0.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_bb_B8_sr_1.sv" />
+			<FILE name="kernel_hdl/conv2d1x1/conv2d1x1_function_cra_slave.sv" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="memcoalesce_load_conv2d1x1_fpgaunique_254_conv2d1x1" cosim_name="" type="master" width="1024" true_lsu_width="1024" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="64" optype="read" criticality="8191" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="2" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="memdep_13_conv2d1x1" cosim_name="" type="master" width="1024" true_lsu_width="1024" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="64" optype="write" criticality="8191" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="1" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="unnamed_conv2d1x115_conv2d1x1" cosim_name="" type="master" width="1024" true_lsu_width="32" burstwidth="1" pipelined="true" addr_space="__local" aspace_id="64" optype="write" criticality="262143" buffer_location="" group_id="0" connected_to_slave="0" >
+				<CONNECTION port="0" bank="-1" />
+			</INTERFACE>
+			<INTERFACE port="lm220_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm222_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="256" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm223_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm225_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm227_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm229_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm231_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm233_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm235_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="262143" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="lm_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="read" criticality="255" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+			<INTERFACE port="unnamed_conv2d1x116_conv2d1x1" cosim_name="" type="master" width="512" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="0" optype="write" criticality="8191" buffer_location="DDR" group_id="0" connected_to_slave="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="input_channels" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" alignment="1" type_qualifier="C" access_qualifier="none" type_name="int" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="input_size" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" alignment="1" type_qualifier="C" access_qualifier="none" type_name="int" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="filter_size" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" alignment="1" type_qualifier="C" access_qualifier="none" type_name="int" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="input_im" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="R" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="filter_weight" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="RC" access_qualifier="none" type_name="float8*" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="filter_bias" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="RC" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+			<ARGUMENT name="output_im" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" alignment="1024" type_qualifier="R" access_qualifier="none" type_name="float*" host_accessible="0" pipe_channel_id="" >
+		</ARGUMENT>
+		</KERNEL_ARGS>
+		<IPS>
+			<IP aspace="64" name="acl_avm_to_ic" num_instances="3">
+				<PARAM type="int" name="ADDRESS_W" value="32"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="WRITEDATA_W" value="1024"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_local_mem_router" num_instances="3">
+				<PARAM type="int" name="ADDRESS_W" value="2"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="NUM_BANKS" value="1"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="2"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="2"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_master_endpoint" num_instances="1">
+				<PARAM type="int" name="ADDRESS_W" value="2"/>
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="0"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="1"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="64" name="acl_ic_slave_endpoint" num_instances="1">
+				<PARAM type="int" name="BURSTCOUNT_W" value="1"/>
+				<PARAM type="int" name="BYTEENA_W" value="128"/>
+				<PARAM type="int" name="DATA_W" value="1024"/>
+				<PARAM type="int" name="ID_W" value="1"/>
+				<PARAM type="int" name="NUM_READ_MASTERS" value="1"/>
+				<PARAM type="int" name="NUM_WRITE_MASTERS" value="0"/>
+				<PARAM type="int" name="PIPELINE_RETURN_PATHS" value="0"/>
+				<PARAM type="int" name="RRP_FIFO_DEPTH" value="0"/>
+				<PARAM type="int" name="RRP_USE_LL_FIFO" value="1"/>
+				<PARAM type="int" name="SEPARATE_READ_WRITE_STALLS" value="0"/>
+				<PARAM type="int" name="SLAVE_FIXED_LATENCY" value="4"/>
+				<PARAM type="int" name="WRP_FIFO_DEPTH" value="0"/>
+			</IP>
+			<IP aspace="64" name="acl_mem2x" num_instances="1">
+				<PARAM type="int" name="DEPTH_WORDS" value="4"/>
+				<PARAM type="int" name="ENABLED" value="0"/>
+				<PARAM type="int" name="MEM_LATENCY" value="4"/>
+				<PARAM type="int" name="MINIMIZE_MEMORY_USAGE" value="0"/>
+				<PARAM type="ACLIPParameter" name="RAM_OPERATION_MODE" value="DUAL_PORT"/>
+				<PARAM type="ACLIPParameter" name="RDW_MODE" value="DONT_CARE"/>
+				<PARAM type="int" name="USE_BYTEENA" value="1"/>
+				<PARAM type="int" name="WIDTH" value="1024"/>
+			</IP>
+		</IPS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<GLOBAL_MEM_LATENCY kernel_side_mem_latency="8" arbitration_latency="6" />
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+	<KERNEL_INTERCONNECT>
+		<USM_INTERCONNECT value="0" />
+		<GLOBAL_ATOMICS value="0" />
+		<GLOBAL_INTERCONNECT gmem_id="0" name="DDR" type="1" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_READS memory="DDR" aspace="1024" />
+		<GLOBAL_WRITES memory="DDR" aspace="1024" />
+	</KERNEL_INTERCONNECT>
+</KERNEL_LIST>

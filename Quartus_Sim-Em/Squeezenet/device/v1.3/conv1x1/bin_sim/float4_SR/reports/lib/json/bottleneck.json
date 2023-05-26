@@ -1,0 +1,165 @@
+{
+  "bottlenecks":
+  [
+    {
+      "name":"shift_reg"
+      , "id":4294967295
+      , "src":"779587024"
+      , "dst":"735315520"
+      , "concurrency":"3"
+      , "type":"Occupancy limiter"
+      , "brief":"Data dependency"
+      , "loop":"conv2d1x1.B4"
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Variable on critical loop carried feedback path: ":"shift_reg"
+          , "Declared at: ":
+          [
+            {
+              "type":"text"
+              , "text":"%L"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float4_SR.cl"
+                  , "line":"28"
+                }
+              ]
+            }
+          ]
+          , "Dependency: ":"Data dependency"
+          , "Concurrency value: ":"3"
+          , "Loop feedback path that lowered occupancy: ":
+          [
+            {
+              "type":"text"
+              , "text":"Loop: conv2d1x1.B6(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float4_SR.cl"
+                  , "line":"29"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Basic block: conv2d1x1.B5(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float4_SR.cl"
+                  , "line":"34"
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Loop: conv2d1x1.B8(%L)"
+              , "links":
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float4_SR.cl"
+                  , "line":"34"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      , "nodes":
+      [
+        {
+          "name":"shift_reg"
+          , "id":779587024
+          , "start":"5.00"
+          , "parent":"conv2d1x1.B4"
+          , "type":"inst"
+        }
+        , {
+          "name":"conv2d1x1.B6"
+          , "id":743954512
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float4_SR.cl"
+                , "line":29
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"conv2d1x1.B5"
+          , "id":765669488
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float4_SR.cl"
+                , "line":34
+              }
+            ]
+          ]
+          , "type":"bb"
+        }
+        , {
+          "name":"conv2d1x1.B8"
+          , "id":744458704
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/float4_SR.cl"
+                , "line":34
+              }
+            ]
+          ]
+          , "type":"loop"
+        }
+        , {
+          "name":"Feedback"
+          , "id":735315520
+          , "end":"3.00"
+          , "parent":"conv2d1x1.B7"
+          , "type":"inst"
+        }
+      ]
+      , "links":
+      [
+        {
+          "from":743954512
+          , "to":743954512
+        }
+        , {
+          "from":743954512
+          , "to":765669488
+        }
+        , {
+          "from":744458704
+          , "to":744458704
+        }
+        , {
+          "from":765669488
+          , "to":744458704
+        }
+        , {
+          "from":779587024
+          , "to":743954512
+        }
+        , {
+          "from":744458704
+          , "to":735315520
+        }
+        , {
+          "from":779587024
+          , "to":735315520
+          , "reverse":1
+        }
+      ]
+    }
+  ]
+}

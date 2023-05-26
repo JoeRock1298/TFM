@@ -1,0 +1,98 @@
+{
+  "nodes":
+  [
+    {
+      "name":"double_add_2"
+      , "id":286750264
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"double_add_2.B4"
+          , "id":286277856
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":290503360
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 2"
+              , "id":290885024
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"double_add_2.B5"
+          , "id":286277936
+          , "type":"bb"
+        }
+        , {
+          "name":"double_add_2.B6"
+          , "id":286278016
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":291219536
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"double_add_2.B7"
+          , "id":286278096
+          , "type":"bb"
+        }
+        , {
+          "name":"double_add_2.B8"
+          , "id":286278176
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 4"
+              , "id":292151568
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"double_add_2.B3"
+          , "id":286277776
+          , "type":"bb"
+        }
+        , {
+          "name":"double_add_2.B1"
+          , "id":286778960
+          , "type":"bb"
+        }
+        , {
+          "name":"double_add_2.B2"
+          , "id":286779040
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":289964384
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"double_add_2.B0"
+          , "id":286778880
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}
