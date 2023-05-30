@@ -1,0 +1,689 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Speculated iterations", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: conv2d3x3"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+            , "line":3
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Fmax bottlenck block: None"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/ipp1476408832230.html"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"conv2d3x3.B2"
+          , "data":
+          ["Yes", ">=1", "0"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                , "line":20
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":" "
+            }
+            , {
+              "type":"text"
+              , "text":"Stallable instruction: n/a"
+            }
+            , {
+              "type":"text"
+              , "text":"Maximum concurrent iterations: Capacity of loop"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Use the %L viewer to estimate capacity"
+                  , "links":
+                  [
+                    {
+                      "view":"Fmax II Report"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Nested Loops"
+                  , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/rfr1469543500580.html"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"conv2d3x3.B3"
+              , "data":
+              ["Yes", ">=1", "0"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                    , "line":24
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":" "
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stallable instruction: n/a"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Maximum concurrent iterations: Capacity of loop"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Use the %L viewer to estimate capacity"
+                      , "links":
+                      [
+                        {
+                          "view":"Fmax II Report"
+                        }
+                      ]
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Nested Loops"
+                      , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/rfr1469543500580.html"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"conv2d3x3.B5"
+                  , "data":
+                  ["Yes", ">=1", "0"]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                        , "line":26
+                      }
+                    ]
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":" "
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Stallable instruction: n/a"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Maximum concurrent iterations: Capacity of loop"
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Use the %L viewer to estimate capacity"
+                          , "links":
+                          [
+                            {
+                              "view":"Fmax II Report"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Nested Loops"
+                          , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/rfr1469543500580.html"
+                        }
+                      ]
+                    }
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"conv2d3x3.B7"
+                      , "data":
+                      ["No", "n/a", "n/a"]
+                      , "debug":
+                      [
+                        [
+                          {
+                            "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                            , "line":32
+                          }
+                        ]
+                      ]
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"Loop unpipelined"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Pipelinable middle loop not pipelined to allow interleaving iterations of outer loop into inner loop"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Stallable instruction: n/a"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Maximum concurrent iterations: 1 due to not being pipelined"
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"See %L for more information"
+                          , "links":
+                          [
+                            {
+                              "guide":"Best Practices Guide : Nested Loops"
+                              , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/rfr1469543500580.html"
+                            }
+                          ]
+                        }
+                      ]
+                      , "children":
+                      [
+                        {
+                          "name":"Fully unrolled loop"
+                          , "data":
+                          ["n/a", "n/a", "n/a"]
+                          , "debug":
+                          [
+                            [
+                              {
+                                "filename":"device/v1.3/conv3x3/conv3x3_ST.cl"
+                                , "line":35
+                              }
+                            ]
+                          ]
+                          , "details":
+                          [
+                            {
+                              "type":"brief"
+                              , "text":"Unrolled by #pragma unroll"
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Unrolled by #pragma unroll"
+                            }
+                          ]
+                          , "children":
+                          [
+                          ]
+                        }
+                        , {
+                          "name":"conv2d3x3.B10"
+                          , "data":
+                          ["Yes", "~4", "1"]
+                          , "debug":
+                          [
+                            [
+                              {
+                                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                , "line":38
+                              }
+                            ]
+                          ]
+                          , "details":
+                          [
+                            {
+                              "type":"brief"
+                              , "text":"Data dependency"
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Compiler failed to schedule this loop with smaller II due to data dependency on variable(s):"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"tmp (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"29"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Most critical loop feedback path during scheduling:"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"4.00 clock cycles 32-bit Floating-point Multiply-Add Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                                , {
+                                  "type":"text"
+                                  , "text":"1.00 clock cycle 32-bit Select Operation (%L, %L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"29"
+                                    }
+                                    , {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"II is an approximation due to the following stallable instructions:"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"Load Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                                , {
+                                  "type":"text"
+                                  , "text":"Load Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"44"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Maximum concurrent iterations: Capacity of loop"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"Use the %L viewer to estimate capacity"
+                                  , "links":
+                                  [
+                                    {
+                                      "view":"Fmax II Report"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"See %L for more information"
+                              , "links":
+                              [
+                                {
+                                  "guide":"Best Practices Guide : Loops in a Single Work-Item Kernel"
+                                  , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/wfa1476380079940.html"
+                                }
+                              ]
+                            }
+                          ]
+                          , "children":
+                          [
+                          ]
+                        }
+                        , {
+                          "name":"conv2d3x3.B11"
+                          , "data":
+                          ["Yes", "~4", "1"]
+                          , "debug":
+                          [
+                            [
+                              {
+                                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                , "line":38
+                              }
+                            ]
+                          ]
+                          , "details":
+                          [
+                            {
+                              "type":"brief"
+                              , "text":"Data dependency"
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Compiler failed to schedule this loop with smaller II due to data dependency on variable(s):"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"tmp (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"29"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Most critical loop feedback path during scheduling:"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"4.00 clock cycles 32-bit Floating-point Multiply-Add Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                                , {
+                                  "type":"text"
+                                  , "text":"1.00 clock cycle 32-bit Select Operation (%L, %L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"29"
+                                    }
+                                    , {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"II is an approximation due to the following stallable instructions:"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"Load Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                                , {
+                                  "type":"text"
+                                  , "text":"Load Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"44"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Maximum concurrent iterations: Capacity of loop"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"Use the %L viewer to estimate capacity"
+                                  , "links":
+                                  [
+                                    {
+                                      "view":"Fmax II Report"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"See %L for more information"
+                              , "links":
+                              [
+                                {
+                                  "guide":"Best Practices Guide : Loops in a Single Work-Item Kernel"
+                                  , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/wfa1476380079940.html"
+                                }
+                              ]
+                            }
+                          ]
+                          , "children":
+                          [
+                          ]
+                        }
+                        , {
+                          "name":"conv2d3x3.B13"
+                          , "data":
+                          ["Yes", "~4", "1"]
+                          , "debug":
+                          [
+                            [
+                              {
+                                "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                , "line":38
+                              }
+                            ]
+                          ]
+                          , "details":
+                          [
+                            {
+                              "type":"brief"
+                              , "text":"Data dependency"
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Compiler failed to schedule this loop with smaller II due to data dependency on variable(s):"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"tmp (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"29"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Most critical loop feedback path during scheduling:"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"4.00 clock cycles 32-bit Floating-point Multiply-Add Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                                , {
+                                  "type":"text"
+                                  , "text":"1.00 clock cycle 32-bit Select Operation (%L, %L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"29"
+                                    }
+                                    , {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"II is an approximation due to the following stallable instructions:"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"Load Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"43"
+                                    }
+                                  ]
+                                }
+                                , {
+                                  "type":"text"
+                                  , "text":"Load Operation (%L)"
+                                  , "links":
+                                  [
+                                    {
+                                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/conv3x3/conv3x3_ST.cl"
+                                      , "line":"44"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"Maximum concurrent iterations: Capacity of loop"
+                              , "details":
+                              [
+                                {
+                                  "type":"text"
+                                  , "text":"Use the %L viewer to estimate capacity"
+                                  , "links":
+                                  [
+                                    {
+                                      "view":"Fmax II Report"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                            , {
+                              "type":"text"
+                              , "text":"See %L for more information"
+                              , "links":
+                              [
+                                {
+                                  "guide":"Best Practices Guide : Loops in a Single Work-Item Kernel"
+                                  , "link":"file:////home/joerock/intelFPGA_pro/21.1/hld/aoc_help_pages/wfa1476380079940.html"
+                                }
+                              ]
+                            }
+                          ]
+                          , "children":
+                          [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

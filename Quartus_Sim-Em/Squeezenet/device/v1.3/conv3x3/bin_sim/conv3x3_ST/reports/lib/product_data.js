@@ -1,0 +1,1 @@
+var infoJSON={"compileInfo":{"nodes":[{"command":"aoc -march=simulator -v -ghdl ../device/v1.3/conv3x3/conv3x3_ST.cl -o ../device/v1.3/conv3x3/bin_sim/conv3x3_ST.aocx -board=a10gx","family":"Arria 10, 10AX115S2F45I1SG, a10_ref:a10gx","id":1,"name":"conv3x3_ST","product":"OPENCL","quartus":"21.1.0 Build 169 Pro","time":"Tue May 30 12:33:16 2023","version":"21.1.0 Build 173.3"}]}};

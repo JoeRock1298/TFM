@@ -1,0 +1,8 @@
+conv2d3x3,target_fmax,240
+conv2d3x3,conv2d3x3.B2,II,1
+conv2d3x3,conv2d3x3.B3,II,1
+conv2d3x3,conv2d3x3.B5,II,1
+conv2d3x3,conv2d3x3.B7,II,0
+conv2d3x3,conv2d3x3.B13,II,4
+conv2d3x3,conv2d3x3.B11,II,4
+conv2d3x3,conv2d3x3.B10,II,4
