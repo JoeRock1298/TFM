@@ -1,0 +1,14 @@
+maxpool2d,target_fmax,240
+maxpool2d,maxpool2d.B1,II,0
+maxpool2d,maxpool2d.B3,II,0
+conv2d3x3,target_fmax,240
+conv2d3x3,conv2d3x3.B1,II,0
+conv2d3x3,conv2d3x3.B3,II,0
+conv2d3x3,conv2d3x3.B9,II,0
+conv2d3x3,conv2d3x3.B7,II,0
+conv2d3x3,conv2d3x3.B5,II,0
+conv2d1x1,target_fmax,240
+conv2d1x1,conv2d1x1.B2,II,0
+conv2d1x1,conv2d1x1.B4,II,0
+avgpool2d,target_fmax,240
+avgpool2d,avgpool2d.B2,II,0

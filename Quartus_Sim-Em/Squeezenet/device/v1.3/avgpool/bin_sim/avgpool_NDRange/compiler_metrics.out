@@ -1,0 +1,2 @@
+avgpool2d,target_fmax,240
+avgpool2d,avgpool2d.B2,II,0

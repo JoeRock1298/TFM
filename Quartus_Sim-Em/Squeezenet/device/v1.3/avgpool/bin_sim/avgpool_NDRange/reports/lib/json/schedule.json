@@ -1,0 +1,520 @@
+{
+  "2496968984":
+  {
+    "nodes":
+    [
+      {
+        "name":"avgpool2d.B0"
+        , "id":2496991456
+        , "start":"0"
+        , "end":"5"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Cluster 0"
+            , "id":2498720400
+            , "start":"1"
+            , "end":"5"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_entry_avgpool2ds_c0_enter_avgpool2d1"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"1"
+                , "Cluster Latency":"4"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"*"
+                , "id":2499546304
+                , "start":"1"
+                , "end":"2"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Integer Multiply"
+                    , "Constant Operand":"169 (0xA9)"
+                    , "Start Cycle":"1"
+                    , "Latency":"1"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                      , "line":9
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"input_im"
+                , "id":2500096224
+                , "start":"0"
+                , "end":"2"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Input Synchronization for 'input_im'"
+                    , "Start Cycle":"0"
+                    , "Latency":"2"
+                  }
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Ptr. Comp."
+                , "id":2505169808
+                , "start":"2"
+                , "end":"2"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"Pointer Computation"
+                    , "Start Cycle":"2"
+                    , "Latency":"0"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                      , "line":9
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":2506167472
+                , "start":"2"
+                , "end":"5"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Start Cycle":"2"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"32"
+                    , "Exit FIFO Width":"128"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+        ]
+      }
+      , {
+        "name":"avgpool2d.B2"
+        , "id":2497013824
+        , "start":"5"
+        , "end":"156"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Ptr. Comp."
+            , "id":2506927808
+            , "start":"6"
+            , "end":"6"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Pointer Computation"
+                , "Start Cycle":"1"
+                , "Latency":"0"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                  , "line":15
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"LD"
+            , "id":2500194432
+            , "start":"6"
+            , "end":"150"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Load"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Start Cycle":"1"
+                , "Latency":"144"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                  , "line":15
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Cluster 2"
+            , "id":2499446160
+            , "start":"150"
+            , "end":"156"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_body_avgpool2ds_c0_enter125_avgpool2d6"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"145"
+                , "Cluster Latency":"6"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"f32 +"
+                , "id":2507207312
+                , "start":"150"
+                , "end":"153"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Add"
+                    , "Start Cycle":"145"
+                    , "Latency":"3"
+                    , "Implementation Preference":"Default DSP usage"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                      , "line":15
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":2500067872
+                , "start":"153"
+                , "end":"156"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Start Cycle":"148"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"32"
+                    , "Exit FIFO Width":"64"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+          , {
+            "name":"+"
+            , "id":2498941184
+            , "start":"6"
+            , "end":"156"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"32-bit Integer Add"
+                , "Constant Operand":"1 (0x1)"
+                , "Start Cycle":"1"
+                , "Latency":"150"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                  , "line":13
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Compare"
+            , "id":2499081520
+            , "start":"156"
+            , "end":"156"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"32-bit Integer Compare"
+                , "Start Cycle":"151"
+                , "Latency":"0"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                  , "line":13
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+      , {
+        "name":"avgpool2d.B1"
+        , "id":2496507328
+        , "start":"156"
+        , "end":"176"
+        , "details":
+        [
+          {
+            "type":"table"
+          }
+        ]
+        , "type":"bb"
+        , "children":
+        [
+          {
+            "name":"Cluster 1"
+            , "id":2498864288
+            , "start":"156"
+            , "end":"174"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Cluster Name":"i_sfc_s_c0_in_for_cond_cleanup_avgpool2ds_c0_enter6_avgpool2d3"
+                , "Cluster Type":"Stall-Free"
+                , "Cluster Start Cycle":"0"
+                , "Cluster Latency":"18"
+              }
+            ]
+            , "type":"cluster"
+            , "children":
+            [
+              {
+                "name":"f32 /"
+                , "id":2498951344
+                , "start":"166"
+                , "end":"171"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Instruction":"32-bit Floating-point Divide"
+                    , "Constant Operand":"169"
+                    , "Start Cycle":"10"
+                    , "Latency":"5"
+                    , "Rounding Scheme":"Faithful Rounding"
+                  }
+                ]
+                , "debug":
+                [
+                  [
+                    {
+                      "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                      , "line":18
+                    }
+                  ]
+                ]
+                , "type":"inst"
+              }
+              , {
+                "name":"Exit"
+                , "id":2500272320
+                , "start":"171"
+                , "end":"174"
+                , "details":
+                [
+                  {
+                    "type":"table"
+                    , "Start Cycle":"15"
+                    , "Latency":"3"
+                    , "Exit FIFO Depth":"32"
+                    , "Exit FIFO Width":"64"
+                    , "Details":"Exit FIFO depth is sized to accommodate all data that may be in-flight in the stall-free cluster; this depth will be equal to or greater than the latency of the cluster.  The width of the FIFO depends on the amount of data that needs to pass from the stall-free logic cluster to the stall-able logic below it."
+                  }
+                ]
+                , "type":"inst"
+              }
+            ]
+          }
+          , {
+            "name":"output_im"
+            , "id":2499972192
+            , "start":"174"
+            , "end":"174"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Input Synchronization for 'output_im'"
+                , "Start Cycle":"18"
+                , "Latency":"0"
+              }
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"Ptr. Comp."
+            , "id":2499862176
+            , "start":"174"
+            , "end":"174"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Pointer Computation"
+                , "Start Cycle":"18"
+                , "Latency":"0"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                  , "line":18
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+          , {
+            "name":"ST"
+            , "id":2499622352
+            , "start":"174"
+            , "end":"176"
+            , "details":
+            [
+              {
+                "type":"table"
+                , "Instruction":"Store"
+                , "Width":"32 bits"
+                , "LSU Style":"Burst-coalesced"
+                , "Stall-free":"No"
+                , "Global Memory":"Yes"
+                , "Start Cycle":"18"
+                , "Latency":"2"
+              }
+            ]
+            , "debug":
+            [
+              [
+                {
+                  "filename":"/home/joerock/Documents/TFM/Quartus_Sim-Em/Squeezenet/device/v1.3/avgpool/avgpool_NDRange.cl"
+                  , "line":18
+                }
+              ]
+            ]
+            , "type":"inst"
+          }
+        ]
+      }
+    ]
+    , "links":
+    [
+      {
+        "from":2499862176
+        , "to":2499622352
+      }
+      , {
+        "from":2505169808
+        , "to":2506167472
+      }
+      , {
+        "from":2500096224
+        , "to":2505169808
+      }
+      , {
+        "from":2498951344
+        , "to":2500272320
+      }
+      , {
+        "from":2499546304
+        , "to":2505169808
+      }
+      , {
+        "from":2496991456
+        , "to":2497013824
+      }
+      , {
+        "from":2499972192
+        , "to":2499862176
+      }
+      , {
+        "from":2498864288
+        , "to":2499622352
+      }
+      , {
+        "from":2506927808
+        , "to":2500194432
+      }
+      , {
+        "from":2500194432
+        , "to":2499446160
+      }
+      , {
+        "from":2497013824
+        , "to":2496507328
+      }
+      , {
+        "from":2498941184
+        , "to":2499081520
+      }
+      , {
+        "from":2507207312
+        , "to":2500067872
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "nodes":
+  [
+    {
+      "name":"maxpool2d"
+      , "id":3330739864
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"maxpool2d.B8"
+          , "id":3330749232
+          , "type":"bb"
+        }
+        , {
+          "name":"maxpool2d.B6"
+          , "id":3330799472
+          , "type":"bb"
+        }
+        , {
+          "name":"maxpool2d.B0"
+          , "id":3330768384
+          , "type":"bb"
+        }
+        , {
+          "name":"maxpool2d.B7"
+          , "id":3330799552
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":3336929168
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"maxpool2d.B1"
+          , "id":3330768464
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":3335050576
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"maxpool2d.B9"
+          , "id":3330749312
+          , "type":"bb"
+        }
+        , {
+          "name":"maxpool2d.B2"
+          , "id":3330768544
+          , "type":"bb"
+        }
+        , {
+          "name":"maxpool2d.B5"
+          , "id":3330799392
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":3336156032
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"maxpool2d.B4"
+          , "id":3330799312
+          , "type":"bb"
+        }
+        , {
+          "name":"maxpool2d.B3"
+          , "id":3330768624
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":3335577424
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"maxpool2d.B10"
+          , "id":3330749392
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 5"
+              , "id":3339184880
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 4"
+              , "id":3338095728
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

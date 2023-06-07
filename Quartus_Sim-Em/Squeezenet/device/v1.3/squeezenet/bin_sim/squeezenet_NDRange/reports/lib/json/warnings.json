@@ -1,0 +1,3 @@
+{"nodes":[
+{"debug":[[{"filename":"device/v1.3/squeezenet/squeezenet_NDRange.cl","line":"96"}]],"details":[{"text":"Compiler Warning: device/v1.3/squeezenet/squeezenet_NDRange.cl:96: declaring global arguments 'input_im', 'filter_weight' and 'filter_bias' with no 'restrict' may lead to low performance for kernel 'conv2d1x1'"}],"name":"device/v1.3/squeezenet/squeezenet_NDRange.cl:96: declaring global arguments 'input_im', 'filter_weight' and 'filter_bias' with no 'restrict' may lead to low performance for kernel 'conv2d1x1'"}
+]}

@@ -1,0 +1,55 @@
+{
+  "nodes":
+  [
+    {
+      "name":"avgpool2d"
+      , "id":2496968984
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"avgpool2d.B2"
+          , "id":2497013824
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 2"
+              , "id":2499446160
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"avgpool2d.B1"
+          , "id":2496507328
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":2498864288
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"avgpool2d.B0"
+          , "id":2496991456
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":2498720400
+              , "type":"cluster"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}

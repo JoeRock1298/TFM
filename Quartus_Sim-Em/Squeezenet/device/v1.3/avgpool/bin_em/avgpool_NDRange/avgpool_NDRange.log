@@ -1,0 +1,1 @@
+Compiler Command: aoc -march=emulator ../device/v1.3/avgpool/avgpool_NDRange.cl -o ../device/v1.3/avgpool/bin_em/avgpool_NDRange.aocx

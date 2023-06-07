@@ -1,0 +1,70 @@
+{
+  "nodes":
+  [
+    {
+      "name":"maxpool2d"
+      , "id":1349423928
+      , "type":"kernel"
+      , "children":
+      [
+        {
+          "name":"maxpool2d.B3"
+          , "id":1349431024
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 3"
+              , "id":1352358848
+              , "type":"cluster"
+            }
+            , {
+              "name":"Cluster 2"
+              , "id":1352190448
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"maxpool2d.B0"
+          , "id":1349447424
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 0"
+              , "id":1351377744
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"maxpool2d.B1"
+          , "id":1349430864
+          , "type":"bb"
+          , "children":
+          [
+            {
+              "name":"Cluster 1"
+              , "id":1351672048
+              , "type":"cluster"
+            }
+          ]
+        }
+        , {
+          "name":"maxpool2d.B2"
+          , "id":1349430944
+          , "type":"bb"
+        }
+        , {
+          "name":"maxpool2d.B4"
+          , "id":1349435280
+          , "type":"bb"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}
